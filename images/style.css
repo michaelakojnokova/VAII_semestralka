@@ -1,0 +1,169 @@
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+h1{
+    font-family:"Brush Script MT";
+    font-size:65px;
+}
+
+p1{
+    font-family:"Baskerville Old Face";
+    font-size: 60%;
+
+}
+.jumbotron{
+    background-color: white;
+
+}
+
+.nav-link{
+    font-family: "Engravers MT";
+    color: black;
+    font-size: 120%;
+}
+.navbar-brand{
+    color: black;
+    font-family: "Engravers MT";
+    font-size: 140%;
+}
+.navbar-expand-sm{
+    border-style: solid;
+    border-width: 1px;
+    border-right-style:hidden;
+    border-left-style: hidden;
+    border-color: black;
+}
+.carousel-control-next-icon,.carousel-control-prev-icon{
+    color: lightpink;
+
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+#mostPopular{
+    font-family: "Engravers MT";
+    font-size: 20px;
+    text-align: center;
+    color: darkgray;
+    background-color:#ffe1e3;
+    background-size:auto;
+    padding: 5px;
+}
+.col-sm-4{
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-style:hidden;
+    border-left-style: hidden;
+    border-color: lightgrey;
+}
+#h6productivity1{
+    text-align: center;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
+#productivity1{
+    text-align: center;
+    color: grey;
+    font-family: "Copperplate Gothic Light";
+    font-size: 20px;
+    text-align: left;
+}
+#pr1{
+    margin-right: 10px;
+}
+#h6productivity1{
+    text-align: center;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
+
+
+#morningWorkout{
+    text-align: center;
+    color: grey;
+    font-family: "Copperplate Gothic Light";
+    font-size: 20px;
+    text-align: left;
+}
+#morW{
+    margin-right: 10px;
+}
+#h6morningWorkout{
+    text-align: center;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
+
+
+#chickenchickpeasalad{
+    text-align: center;
+    color: grey;
+    font-family: "Copperplate Gothic Light";
+    font-size: 20px;
+    text-align: left;
+}
+#chickSal{
+    margin-right: 10px;
+}
+#h6chickenchickpeasalad{
+    text-align: center;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
+
+
+#facemasks{
+    text-align: center;
+    color: grey;
+    font-family: "Copperplate Gothic Light";
+    font-size: 20px;
+    text-align: left;
+}
+#faceM{
+    margin-right: 10px;
+}
+#h6facemasks{
+    text-align: center;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
+
+
+#plasticChallenge{
+    text-align: center;
+    color: grey;
+    font-family: "Copperplate Gothic Light";
+    font-size: 20px;
+    text-align: left;
+}
+#plastCh{
+    margin-right: 10px;
+}
+#h6plasticChallenge{
+    text-align: center;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
+
+#exercise{
+    text-align: center;
+    color: grey;
+    font-family: "Copperplate Gothic Light";
+    font-size: 20px;
+    text-align: left;
+}
+#exerc{
+    margin-right: 10px;
+}
+#h6exercise{
+    text-align: center;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
