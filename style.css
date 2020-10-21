@@ -251,4 +251,12 @@ margin-left: 5px;
 #pToxins{
     font-family: Lora;
     font-size: 14px;
+} /*toto nefunguje*/
+.dropdown-menu{
+    position:center;
+}
+/*EatWell***************************************************************************************************************************/
+#EWCategories{
+    padding-top: 15px;
+    font-family: "Baskerville Old Face";
 }
