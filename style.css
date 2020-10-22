@@ -255,8 +255,151 @@ margin-left: 5px;
 .dropdown-menu{
     position:center;
 }
-/*EatWell***************************************************************************************************************************/
+/*EatWellRecipes***************************************************************************************************************************/
 #EWCategories{
     padding-top: 15px;
     font-family: "Baskerville Old Face";
+}
+
+ /*farba linku*/
+.link-my-color {
+    color: black !important;
+}
+/*EatWell - Dinners , Dinners*******************************************************************************************************/
+#EWDcol-sm-6{ /*na vycentrovanie elemenetu*/
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#EWDh2Dinners{
+    position: center;
+    font-family: "Segoe Script", serif;
+    color: black;
+    background-color:#ffe1e3;
+    text-align: center;
+    font-size: 45px;
+
+}
+#EWDnavbar-expand-sm{
+    border-style: solid;
+    border-width: 1px;
+    border-right-style:hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    border-color: black;
+}
+
+/*
+#h5lemonpepperchicken{
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 200%;
+    text-align: left;
+    padding-top: 30px;
+}
+#pLemonpepperchicken{
+    font-family: Lora;
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+}
+#lemonpepperchicken{
+    margin-right: 20px;
+}
+*/
+/*VZOR NAZOV A TEXT*/
+#container7{
+    margin-top: 30px;
+}
+#h5lemonpepperchicken{
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 200%;
+    text-align: left;
+    padding-top: 30px;
+}
+#pLemonpepperchicken{
+    font-family: Lora;
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+
+}
+#lemonpepperchicken{
+    margin-right: 20px;
+
+}
+
+
+#h5spicymexican{
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 200%;
+    text-align: left;
+    padding-top: 30px;
+}
+#pspicymexican{
+    font-family: Lora;
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+}
+#spicymexican{
+    margin-right: 20px;
+}
+
+
+
+#h5pumpkinsoup{
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 200%;
+    text-align: left;
+    padding-top: 30px;
+}
+#ppumpkinsoup{
+    font-family: Lora;
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+}
+#pumpkinsoup{
+    margin-right: 20px;
+
+}
+
+
+#h5leftoverturkey{
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 200%;
+    text-align: left;
+    padding-top: 30px;
+}
+#pleftoverturkey{
+    font-family: Lora;
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+}
+#leftoverturkey{
+    margin-right: 20px;
+}
+
+
+#h5basacashew{
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 200%;
+    text-align: left;
+    padding-top: 30px;
+}
+#pbasacashew{
+    font-family: Lora;
+    font-family:"Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+}
+#basacashew{
+    margin-right: 20px;
+}
+
+.link-my-color {
+    color: black !important;
 }
