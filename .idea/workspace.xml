@@ -11,8 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e36608-7b19-4931-90fb-74fe8b0a2cf5" name="Default Changelist" comment="ThirdDay">
+      <change afterPath="$PROJECT_DIR$/EWDlemonpepperchicken.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EatWellDinners.html" beforeDir="false" afterPath="$PROJECT_DIR$/EatWellDinners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +43,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -69,7 +72,8 @@
       <workItem from="1603186723578" duration="25099000" />
       <workItem from="1603228540849" duration="601000" />
       <workItem from="1603263340904" duration="27173000" />
-      <workItem from="1603351865125" duration="31288000" />
+      <workItem from="1603351865125" duration="31550000" />
+      <workItem from="1603452173374" duration="14606000" />
     </task>
     <task id="LOCAL-00001" summary="FirstDay">
       <created>1603216073018</created>
@@ -99,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603386032004</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ThirdDay">
+      <created>1603388116616</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603388116616</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,10 +136,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ThirdDay" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1603386187093">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1603388227993">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.-486.1920.1040@0.0.1536.824" timestamp="1603386187093" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824/1920.-486.1920.1040@0.0.1536.824" timestamp="1603388227993" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603294484741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -141,10 +152,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="576" y="110" key="Github.UntrackedFilesDialog/0.0.1536.824/1920.-486.1920.1040@0.0.1536.824" timestamp="1603214959804" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603386043099">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603388124028">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-486.1920.1040@0.0.1536.824" timestamp="1603386043099" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-486.1920.1040@0.0.1536.824" timestamp="1603388124028" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603216332353">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
