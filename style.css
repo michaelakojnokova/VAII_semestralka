@@ -1,4 +1,5 @@
-
+@import url(//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium);
+@import url(//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora);
 h1{
     font-family:"Brush Script MT";
     font-size:65px;
@@ -209,8 +210,7 @@ p1{
 margin-left: 5px;
 }
 
-@import url(//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium);
-@import url(//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora);
+
 @font-face {font-family: "Neutraface 2 Display Medium"; src: url("//db.onlinewebfonts.com/t/ed7de7f8213e4a5e40e57f9bbbbd8929.eot")  }
 @font-face {font-family: "Lora"; src: url("//db.onlinewebfonts.com/t/5c803199923a6ed48112bebbb486b3e0.eot")}
 
@@ -268,9 +268,7 @@ margin-left: 5px;
     font-family: Lora;
     font-size: 14px;
 } /*toto nefunguje*/
-.dropdown-menu{
-    position:center;
-}
+
 /*EatWellRecipes***************************************************************************************************************************/
 #EWCategories{
     padding-top: 15px;
@@ -290,7 +288,7 @@ margin-left: 5px;
 
 }
 #EWDh2Dinners{
-    position: center;
+
     font-family: "Segoe Script", serif;
     color: black;
     background-color:#ffe1e3;
@@ -453,5 +451,4 @@ margin-left: 5px;
 #centered{
     display: flex;
     justify-content: center;
-
 }
