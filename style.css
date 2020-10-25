@@ -24,7 +24,7 @@ p1{
     font-family: "Engravers MT";
     font-size: 140%;
 }
-.navbar-expand-sm{
+.navbar-expand-lg ,.navbar,.navbar-light{
     border-style: solid;
     border-width: 1px;
     border-right-style:hidden;
@@ -187,8 +187,10 @@ p1{
     border-width: 1px;
     border-bottom-style:hidden;
     border-left-style: hidden;
-    border-color: lightgrey;
+    display: flex;
+    justify-content: center;
 }
+
 #h6eatwell{
     text-align: left;
     font-family: "arial-bold";
