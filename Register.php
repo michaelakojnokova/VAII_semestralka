@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Wild & Gorgeous - Dinners</title>
-    <meta charset="UTF-8">
+    <title>Wild & Gorgeous - Home</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium"
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
           type="text/css"/>
+    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -25,8 +24,9 @@
        <p>Your daily dose of lifestyle!</p> -->
 </div>
 
+
 <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" href="Home.html">Home</a>
+    <a class="navbar-brand" href="Home.php">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -40,10 +40,10 @@
                 </a>
                 <div class="dropdown-menu" >
                     <a class="dropdown-item" href="#">Eat well</a>
-                    <a class="dropdown-item" href="EatWellRecipes.html">Recipes</a>
+                    <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
                     <a class="dropdown-item" href="#">Breakfast</a>
                     <a class="dropdown-item" href="#">Lunch</a>
-                    <a class="dropdown-item" href="#">Dinner</a>
+                    <a class="dropdown-item" href="EatWellDinners.php">Dinner</a>
                     <a class="dropdown-item" href="#">Appetizers</a>
                     <a class="dropdown-item" href="#">Meat</a>
                     <a class="dropdown-item" href="#">Vegan</a>
@@ -94,88 +94,56 @@
                 </div>
             </li>
         </ul>
-    </div>
-</nav> <!--MENUUUUUUUUUUUUUUUUUUUUU-->
-
-
-<h2 id="EWDh2Dinners">Delicious Dinners</h2>
-
-<div id="EWDcol-sm-6" class="col-sm-6" style="float: none">
-
-    <div id="container7">
-        <img id="lemonpepperchicken" src="images/EWDlemonpepperchicken.jpg" height="370" width="370" style="float: left"
-             class="img-fluid" alt="16"/>
-        <h5 id="h5lemonpepperchicken"><a class="link-my-color" href="EWDlemonpepperchicken.html">LEMON PEPPER
-            CHICKEN</a></h5>
-        <p id="pLemonpepperchicken">There’s something divine about lemon and pepper together. The zesty flavours are
-            awesome
-            on both seafood and chicken. Here I’ve added a bit of extra spice and paired it with a low-carb rice option
-            for
-            a lean and green dinner. </p>
-    </div>
-    <br><br>
-
-
-    <div id="container8">
-        <img id="spicymexican" src="images/EWDspicymexican.jpg" height="370" width="370" style="float: left"
-             class="img-fluid" alt="17"/>
-        <h5 id="h5spicymexican">SPICY MEXICAN BOWL</h5>
-        <p id="pspicymexican">This delicious and simple bowl can be whipped up in 10 minutes or less. Such a simple,
-            nourishing dish, with all the robust flavours of Mexicana. Save yourself a heap of time an effort by using
-            up
-            that tin of beans in the cupboard too. Double win! </p>
-    </div>
-
-    <br><br>
-
-
-    <div id="container9">
-        <img id="pumpkinsoup" src="images/EWDpumpkinsoup.jpg" height="370" width="370" style="float: left"
-             class="img-fluid" alt="18"/>
-        <h5 id="h5pumpkinsoup">PUMPKIN SOUP</h5>
-        <p id="ppumpkinsoup">This creamy pumpkin soup recipe is the perfect dish for a cool fall night. Packed with warm
-            curry flavor, it's comforting, nourishing, and delicious. </p>
-    </div>
-
-    <br><br>
-
-
-    <div id="container10">
-        <img id="leftoverturkey" src="images/EWDleftoverturkey.jpg" height="370" width="370" style="float: left"
-             class="img-fluid" alt="19"/>
-        <h5 id="h5leftoverturkey">LEFTOVER TURKEY + STUFFING SALAD</h5>
-        <p id="pleftoverturkey">Unless you are feeding a host of people, a whole roast turkey can be pretty difficult to
-            eat
-            in one sitting. Enter this salad which is perfect for using up the leftovers and is super healthy too. </p>
-    </div>
-
-    <br><br>
-
-    <div id="container11">
-        <img id="basacashew" src="images/EWDbasacashew.jpg" height="370" width="370" style="float: left"
-             class="img-fluid" alt="20"/>
-        <h5 id="h5basacashew">BASA + CASHEW STIR FRY</h5>
-        <p id="pbasacashew">A classic stir fry is a super simple, 1-pan situation that is convenient after a long day or
-            week – no chef skills required. Minimal prep and cooking time, throw this together when you need something
-            tasty
-            in a flash! </p>
-    </div>
-
-
-    <br><br>
-    <nav>
-        <ul class="pagination d-flex justify-content-center flex-wrap pagination-rounded-flat pagination-success">
-            <li class="page-item"><a class="page-link" href="#" data-abc="true"> &#8678;</a></li>
-            <li class="page-item active"><a class="page-link" href="#" data-abc="true">1</a></li>
-            <li class="page-item"><a class="page-link" href="#" data-abc="true">2</a></li>
-            <li class="page-item"><a class="page-link" href="#" data-abc="true">3</a></li>
-            <li class="page-item"><a class="page-link" href="#" data-abc="true">4</a></li>
-            <li class="page-item"><a class="page-link" href="#" data-abc="true"> &#8680;</a></li>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="AboutMe.php">About me</a>
+            </li>
         </ul>
-    </nav>
-</div>
-<br><br>
+
+        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>
+    </div>
+
+
+
+</nav>
+
+
+
+
+<form action="action_page.php">
+    <div id="containerRegister" class="container">
+
+        <h1 id="h1Register">Register</h1>
+        <p id="pRegister">Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input class="rounded" type="text" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input class="rounded" type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <hr>
+
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+        <button  type="submit" class="registerbtn button5">Register</button>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div>
+    </div>
+
+    <br>
+
+
+</form>
 
 
 </body>
 </html>
+
+

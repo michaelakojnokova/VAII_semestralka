@@ -1,38 +1,43 @@
 @import url(//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium);
 @import url(//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora);
-h1{
-    font-family:"Brush Script MT";
-    font-size:65px;
+/*Home***************************************************************************************************************************/
+h1 {
+    font-family: "Brush Script MT";
+    font-size: 65px;
 }
 
-p1{
-    font-family:"Baskerville Old Face";
+p1 {
+    font-family: "Baskerville Old Face";
     font-size: 60%;
 
 }
-.jumbotron{
+
+.jumbotron {
     background-color: white;
 
 }
 
-.nav-link{
+.nav-link {
     font-family: "Engravers MT";
     color: black;
     font-size: 120%;
 }
-.navbar-brand{
+
+.navbar-brand {
     color: black;
     font-family: "Engravers MT";
     font-size: 140%;
 }
-.navbar-expand-lg ,.navbar,.navbar-light{
+
+.navbar-expand-lg, .navbar, .navbar-light {
     border-style: solid;
     border-width: 1px;
-    border-right-style:hidden;
+    border-right-style: hidden;
     border-left-style: hidden;
     border-color: black;
 }
-.carousel-control-next-icon,.carousel-control-prev-icon{
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
     color: lightpink;
 
 }
@@ -46,260 +51,321 @@ p1{
     border-radius: 50%;
     border: 1px solid black;
 }
-.carousel-item.active,.carousel-item-next,
+
+.carousel-item.active, .carousel-item-next,
 .carousel-item-prev {
     display: block;
 }
 
-#mostPopular{
+#mostPopular {
     font-family: "Engravers MT";
     font-size: 20px;
     text-align: center;
     color: darkgray;
-    background-color:#ffe1e3;
-    background-size:auto;
+    background-color: #ffe1e3;
+    background-size: auto;
     padding: 5px;
 }
-.col-sm-4{
+
+.col-sm-4 {
     border-style: solid;
     border-width: 1px;
-    border-bottom-style:hidden;
+    border-bottom-style: hidden;
     border-left-style: hidden;
     border-color: lightgrey;
 }
-#centered2{
+
+#centered2 {
     display: flex;
     justify-content: center;
 
 }
+
 .carousel-inner img {
     width: 100%;
     height: 100%;
 }
-#h6productivity1{
+
+#h6productivity1 {
     text-align: right;
     font-family: "arial-bold";
     color: #ffccc2;
 }
-#productivity1{
+
+#productivity1 {
     text-align: center;
     color: grey;
     font-family: "Copperplate Gothic Light";
     font-size: 20px;
     text-align: left;
 }
-#pr1{
+
+#pr1 {
     margin-right: 10px;
 }
-#h6productivity1{
+
+#h6productivity1 {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
 
 
-#morningWorkout{
+#morningWorkout {
     text-align: center;
     color: grey;
     font-family: "Copperplate Gothic Light";
     font-size: 20px;
     text-align: left;
 }
-#morW{
+
+#morW {
     margin-right: 10px;
 }
-#h6morningWorkout{
+
+#h6morningWorkout {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
 
 
-#chickenchickpeasalad{
+#chickenchickpeasalad {
     text-align: center;
     color: grey;
     font-family: "Copperplate Gothic Light";
     font-size: 20px;
     text-align: left;
 }
-#chickSal{
+
+#chickSal {
     margin-right: 10px;
 }
-#h6chickenchickpeasalad{
+
+#h6chickenchickpeasalad {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
 
 
-#facemasks{
+#facemasks {
     text-align: center;
     color: grey;
     font-family: "Copperplate Gothic Light";
     font-size: 20px;
     text-align: left;
 }
-#faceM{
+
+#faceM {
     margin-right: 10px;
 }
-#h6facemasks{
+
+#h6facemasks {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
 
 
-#plasticChallenge{
+#plasticChallenge {
     text-align: center;
     color: grey;
     font-family: "Copperplate Gothic Light";
     font-size: 20px;
     text-align: left;
 }
-#plastCh{
+
+#plastCh {
     margin-right: 10px;
 }
-#h6plasticChallenge{
+
+#h6plasticChallenge {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
 
-#exercise{
+#exercise {
     text-align: center;
     color: grey;
     font-family: "Copperplate Gothic Light";
     font-size: 20px;
     text-align: left;
 }
-#exerc{
+
+#exerc {
     margin-right: 10px;
 }
-#h6exercise{
+
+#h6exercise {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
-#h2WhatsNew{
+
+#h2WhatsNew {
     font-family: "Baskerville Old Face";
     border-left: lightgrey;
     border-top: lightgrey;
     border-style: solid;
     border-width: 1px;
-    border-bottom-style:hidden;
+    border-bottom-style: hidden;
     border-left-style: hidden;
     display: flex;
     justify-content: center;
 }
 
-#h6eatwell{
+#h6eatwell {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
-#h5vegan{
-    font-family:"Neutraface 2 Display Medium";
+
+#h5vegan {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
 }
-#pProtein{
+
+#pProtein {
     font-family: Lora;
     font-size: 14px;
 }
 
-#protein_uvod{
-margin-left: 5px;
+#protein_uvod {
+    margin-left: 5px;
 }
 
 
-@font-face {font-family: "Neutraface 2 Display Medium"; src: url("//db.onlinewebfonts.com/t/ed7de7f8213e4a5e40e57f9bbbbd8929.eot")  }
-@font-face {font-family: "Lora"; src: url("//db.onlinewebfonts.com/t/5c803199923a6ed48112bebbb486b3e0.eot")}
-
-#h6tips{
-     text-align: left;
-     font-family: "arial-bold";
-     color: #ffccc2;
- }
-#h5posture{
-    font-family:"Neutraface 2 Display Medium";
-    font-size: 200%;
+@font-face {
+    font-family: "Neutraface 2 Display Medium";
+    src: url("//db.onlinewebfonts.com/t/ed7de7f8213e4a5e40e57f9bbbbd8929.eot")
 }
 
-#pPosture{
-    font-family: Lora;
-    font-size: 14px;
+@font-face {
+    font-family: "Lora";
+    src: url("//db.onlinewebfonts.com/t/5c803199923a6ed48112bebbb486b3e0.eot")
 }
-#h6tips1{
+
+#h6tips {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
-#h5unproductive{
-    font-family:"Neutraface 2 Display Medium";
+
+#h5posture {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
 }
-#pUnproductive{
+
+#pPosture {
     font-family: Lora;
     font-size: 14px;
 }
 
-#h6finance{
+#h6tips1 {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
-#h5payRise{
-    font-family:"Neutraface 2 Display Medium";
+
+#h5unproductive {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
 }
-#pPayRise{
+
+#pUnproductive {
     font-family: Lora;
     font-size: 14px;
 }
-#h6greenLiving{
+
+#h6finance {
     text-align: left;
     font-family: "arial-bold";
     color: #ffccc2;
 }
-#h5toxins{
-    font-family:"Neutraface 2 Display Medium";
+
+#h5payRise {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
 }
-#pToxins{
+
+#pPayRise {
     font-family: Lora;
     font-size: 14px;
-} /*toto nefunguje*/
+}
+
+#h6greenLiving {
+    text-align: left;
+    font-family: "arial-bold";
+    color: #ffccc2;
+}
+
+#h5toxins {
+    font-family: "Neutraface 2 Display Medium";
+    font-size: 200%;
+}
+
+#pToxins {
+    font-family: Lora;
+    font-size: 14px;
+}
+
+/*toto nefunguje*/
+
+
+#form1 {
+    font-family: "Lora";
+    font-size: 25px;
+    color: black;
+}
+
+#submit {
+    border: lightgrey solid;
+}
+
+#email {
+    border-color: lightgrey;
+}
+
+.page-link {
+    color: black;
+}
 
 /*EatWellRecipes***************************************************************************************************************************/
-#EWCategories{
+#EWCategories {
     padding-top: 15px;
     font-family: "Baskerville Old Face";
 }
 
- /*farba linku*/
+/*farba linku*/
 .link-my-color {
     color: black !important;
 }
+
 /*EatWell - Dinners , Dinners*******************************************************************************************************/
-#EWDcol-sm-6{ /*na vycentrovanie elemenetu*/
-    margin:auto;
+#EWDcol-sm-6 { /*na vycentrovanie elemenetu*/
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
 }
-#EWDh2Dinners{
+
+#EWDh2Dinners {
 
     font-family: "Segoe Script", serif;
     color: black;
-    background-color:#ffe1e3;
+    background-color: #ffe1e3;
     text-align: center;
     font-size: 45px;
 
 }
-#EWDnavbar-expand-sm{
+
+#EWDnavbar-expand-sm {
     border-style: solid;
     border-width: 1px;
-    border-right-style:hidden;
+    border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
     border-color: black;
@@ -323,94 +389,103 @@ margin-left: 5px;
 }
 */
 /*VZOR NAZOV A TEXT*/
-#container7{
+#container7 {
     margin-top: 30px;
 }
-#h5lemonpepperchicken{
-    font-family:"Neutraface 2 Display Medium";
+
+#h5lemonpepperchicken {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
     text-align: left;
     padding-top: 30px;
 }
-#pLemonpepperchicken{
+
+#pLemonpepperchicken {
     font-family: Lora;
-    font-family:"Neutraface 2 Display Medium";
+    font-family: "Neutraface 2 Display Medium";
     font-size: 140%;
     text-align: left;
-
 }
-#lemonpepperchicken{
+
+#lemonpepperchicken {
     margin-right: 20px;
 
 }
 
 
-#h5spicymexican{
-    font-family:"Neutraface 2 Display Medium";
+#h5spicymexican {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
     text-align: left;
     padding-top: 30px;
 }
-#pspicymexican{
+
+#pspicymexican {
     font-family: Lora;
-    font-family:"Neutraface 2 Display Medium";
+    font-family: "Neutraface 2 Display Medium";
     font-size: 140%;
     text-align: left;
 }
-#spicymexican{
+
+#spicymexican {
     margin-right: 20px;
 }
 
 
-
-#h5pumpkinsoup{
-    font-family:"Neutraface 2 Display Medium";
+#h5pumpkinsoup {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
     text-align: left;
     padding-top: 30px;
 }
-#ppumpkinsoup{
+
+#ppumpkinsoup {
     font-family: Lora;
-    font-family:"Neutraface 2 Display Medium";
+    font-family: "Neutraface 2 Display Medium";
     font-size: 140%;
     text-align: left;
 }
-#pumpkinsoup{
+
+#pumpkinsoup {
     margin-right: 20px;
 
 }
 
 
-#h5leftoverturkey{
-    font-family:"Neutraface 2 Display Medium";
+#h5leftoverturkey {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
     text-align: left;
     padding-top: 30px;
 }
-#pleftoverturkey{
+
+#pleftoverturkey {
     font-family: Lora;
-    font-family:"Neutraface 2 Display Medium";
+    font-family: "Neutraface 2 Display Medium";
     font-size: 140%;
     text-align: left;
 }
-#leftoverturkey{
+
+#leftoverturkey {
     margin-right: 20px;
 }
 
 
-#h5basacashew{
-    font-family:"Neutraface 2 Display Medium";
+#h5basacashew {
+    font-family: "Neutraface 2 Display Medium";
     font-size: 200%;
     text-align: left;
     padding-top: 30px;
 }
-#pbasacashew{
+
+#pbasacashew {
     font-family: Lora;
-    font-family:"Neutraface 2 Display Medium";
+    font-family: "Neutraface 2 Display Medium";
     font-size: 140%;
     text-align: left;
 }
-#basacashew{
+
+#basacashew {
     margin-right: 20px;
 }
 
@@ -420,35 +495,219 @@ margin-left: 5px;
 
 /*EatWell - Dinners - LemonPepperChicken*******************************************************************************************************/
 
-#h2EWDlemonpepperchickenR{
+#h2EWDlemonpepperchickenR {
     font-family: "Neutraface 2 Display Medium";
     font-size: 45px;
     text-align: center;
     padding-top: 25px;
     font-weight: bolder;
 }
-#EWDlemonpepperchickenR{
+
+#EWDlemonpepperchickenR {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-#pEWDlemonpepperchickenR{
+
+#pEWDlemonpepperchickenR {
     font-family: Lora;
     padding-bottom: 5px;
 }
-#p2EWDlemonpepperchickenR{
-    border-style:solid;
+
+#p2EWDlemonpepperchickenR {
+    border-style: solid;
     border-width: 2px;
-    border-right-style:hidden;
+    border-right-style: hidden;
     border-left-style: hidden;
     border-color: black;
-    padding-top:  5px;
+    padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
     font-family: "Baskerville Old Face";
-    font-size:20px;
+    font-size: 20px;
 }
-#centered{
+
+#centered {
     display: flex;
     justify-content: center;
+}
+
+/*Girl***************************************************************************************************************************/
+#girl {
+    float: right;
+    display: flex;
+
+}
+
+#pAboutMe {
+    font-family: Lora;
+    font-family: "Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+
+}
+
+#girl {
+    margin-left: 40px;
+
+}
+
+#AboutMe { /*na vycentrovanie elemenetu*/
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.col-sm-16 { /*na vycentrovanie elemenetu*/
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#h2AboutMe {
+    font-family: "Neutraface 2 Display Medium";
+    font-size: 45px;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: bolder;
+}
+
+#pAboutMe {
+    font-family: Lora;
+    font-family: "Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+}
+
+.mb-4 {
+    margin-top: 30px;
+}
+
+#ContactMe {
+    font-family: "Neutraface 2 Display Medium";
+    font-size: 45px;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: bolder;
+
+}
+
+#Suggestion {
+    font-family: Lora;
+    font-family: "Neutraface 2 Display Medium";
+    font-size: 140%;
+    text-align: left;
+}
+
+.bi, .bi-heart {
+    justify-content: right;
+}
+
+/*Register*********************************************************************************************************************
+
+
+
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+#containerRegister {
+    padding: 50px;
+    background-image: url("https://media.istockphoto.com/vectors/pink-marble-background-light-elegant-template-for-wedding-card-baby-vector-id1200907979?k=6&m=1200907979&s=170667a&w=0&h=MDEX31iDfrBwZO-JIqVSYJYmpVAm3ZTBnNurnhYI9oQ=");
+
+}
+#h1Register{
+    text-align: center;
+    font-family: "Yu Gothic UI Light";
+    font-size: 45px;
+}
+#pRegister{
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f7f7f7;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f7f7f7;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+    background-color: #f7f7f7;
+    color: black;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f7f7f7;
+    text-align: center;
+
+    border: none;
+    cursor: pointer;
+   height: 60px;
+    opacity: 0.9;
+}
+.registerbtn ,.button5{
+    border-radius: 4px;
+}
+.signin{
+    border-radius: 4px;
+    width: 300px;
+    padding: 16px 20px;
+}
+
+/*SignIN**********************************************************************************************************/
+
+#containerLogin1,#containerLogin2,#containerLogin3,#containerLogin4,#containerLogin5{
+    width: 5px;
+    height: 38px;
+    display: flex;
+    justify-content: right;
+    padding-right: 5px;
+}
+.btn, .btn-info, .btn-block ,.btn-round{
+    color: white;
+    background-color: #ffe1e3;
+    border: none;
+}
+.btn:hover, .btn-info:hover, .btn-block :hover,.btn-round:hover{
+    background-color: #ffccc2;
+}
+.btn:active, .btn-info:active, .btn-block :active,.btn-round:active{
+    background-color: #ffccc2;
 }

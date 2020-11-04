@@ -15,6 +15,7 @@
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
           type="text/css"/>
+    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -25,7 +26,7 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" href="Home.html">Home</a>
+    <a class="navbar-brand" href="Home.php">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,10 +40,10 @@
                 </a>
                 <div class="dropdown-menu" >
                     <a class="dropdown-item" href="#">Eat well</a>
-                    <a class="dropdown-item" href="EatWellRecipes.html">Recipes</a>
+                    <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
                     <a class="dropdown-item" href="#">Breakfast</a>
                     <a class="dropdown-item" href="#">Lunch</a>
-                    <a class="dropdown-item" href="EatWellDinners.html">Dinner</a>
+                    <a class="dropdown-item" href="EatWellDinners.php">Dinner</a>
                     <a class="dropdown-item" href="#">Appetizers</a>
                     <a class="dropdown-item" href="#">Meat</a>
                     <a class="dropdown-item" href="#">Vegan</a>
@@ -93,7 +94,18 @@
                 </div>
             </li>
         </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="AboutMe.php">About me</a>
+            </li>
+        </ul>
+        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>
+
     </div>
+
+
 </nav>
     <!--recepty kategorie-->
 <div class="container-fluid bg-3 text-center">
@@ -108,7 +120,7 @@
             <img src="images/EWlunch.jpg" class="img-responsive" style="width:100%" alt="Image">
         </div>
         <div class="col-sm-3">
-            <p><a class="link-my-color" href="EatWellDinners.html">DINNER</a></p>
+            <p><a class="link-my-color" href="EatWellDinners.php">DINNER</a></p>
             <img src="images/EWdinner.jpg" class="img-responsive" style="width:100%" alt="Image">
         </div>
         <div class="col-sm-3">

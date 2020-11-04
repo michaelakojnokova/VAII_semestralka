@@ -14,6 +14,7 @@
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
           type="text/css"/>
+    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +25,7 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" href="Home.html">Home</a>
+    <a class="navbar-brand" href="Home.php">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,10 +39,10 @@
                 </a>
                 <div class="dropdown-menu" >
                     <a class="dropdown-item" href="#">Eat well</a>
-                    <a class="dropdown-item" href="EatWellRecipes.html">Recipes</a>
+                    <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
                     <a class="dropdown-item" href="#">Breakfast</a>
                     <a class="dropdown-item" href="#">Lunch</a>
-                    <a class="dropdown-item" href="#">Dinner</a>
+                    <a class="dropdown-item" href="EatWellDinners.php">Dinner</a>
                     <a class="dropdown-item" href="#">Appetizers</a>
                     <a class="dropdown-item" href="#">Meat</a>
                     <a class="dropdown-item" href="#">Vegan</a>
@@ -92,7 +93,62 @@
                 </div>
             </li>
         </ul>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="AboutMe.php">About me</a>
+            </li>
+        </ul>
+
+        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>
+
+
+        <div id="containerLogin1" class="container">
+            <button type="button" class="btn btn-info btn-round " data-toggle="modal" data-target="#loginModal">
+                Login
+            </button>
+        </div>
+
+
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-title text-center">
+                            <h4>Login</h4>
+                        </div>
+                        <div class="d-flex flex-column text-center">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                </div>
+                                <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                            </form>
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <div class="signup-section">Not a member yet? <a href="Register.php" class="text-info"> Sign Up</a>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+
 </nav>
 
 
@@ -159,7 +215,23 @@
                 <img id="exerc" src="images/exercise.jpeg" height="80" width="100" style="float: left" alt="9"/>
                 <p id="exercise">how much exercise is enough? </p> <br>
             </div>
+ <hr>
+
+
+            <h6 id="form1">Hey ! Enter your details below to receive blog posts and recipes direct to your inbox. </h6>
+            <br>
+            <div id="container12">
+            <form action="/action_page.php">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <button id="submit" type="submit" class="btn btn-default">Submit</button>
+            </form>
+            </div>
+<hr>
         </div>
+<br><br>
+
 
 
         <div class="col-sm-8">
@@ -180,7 +252,7 @@
                 <img id="posture" src="images/posture.jpg" height="280" width="370" style="float: right"
                      class="img-fluid" alt="12"/>
                 <h6 id="h6tips"> TIPS</h6>
-                <h5 id="h5posture">6 SIMPLE WAYS TO HAVE BETTER POSTURE AT YOUR DESK</h5>
+                <h5 id="h5posture">6SIMPLE WAYS TO HAVE BETTER POSTURE AT YOUR DESK</h5>
                 <p id="pPosture"> You’re probably currently sitting at your desk reading this, blissfully unaware of
                     your posture
                     right now—and that’s perfectly normal. It can be difficult to always be mindful of your posture,
@@ -192,7 +264,7 @@
                 <img id="unproductive.png" src="images/unproductive.png" height="280" width="370" style="float: right"
                      class="img-fluid" alt="13"/>
                 <h6 id="h6tips1"> TIPS</h6>
-                <h5 id="h5unproductive">10 THINGS TO DO WHEN YOU'RE FEELING UNPRODUCTIVE</h5>
+                <h5 id="h5unproductive">10THINGS TO DO WHEN YOU'RE FEELING UNPRODUCTIVE</h5>
                 <p id="pUnproductive"> If you’re lacking motivation or energy these days, it’s not just you.
                     Unfortunately, we don’t have an “on” button, and we can’t be plugged into an outlet. That means that
                     no matter how much our employers expect us to be productive from 9-5, our energy levels and
@@ -230,7 +302,7 @@
 <nav>
     <ul class="pagination d-flex justify-content-center flex-wrap pagination-rounded-flat pagination-success">
         <li class="page-item"><a class="page-link" href="#" data-abc="true"> &#8678;</a></li>
-        <li class="page-item active"><a class="page-link" href="#" data-abc="true">1</a></li>
+        <li class="page-item "><a class="page-link" href="#" data-abc="true">1</a></li>
         <li class="page-item"><a class="page-link" href="#" data-abc="true">2</a></li>
         <li class="page-item"><a class="page-link" href="#" data-abc="true">3</a></li>
         <li class="page-item"><a class="page-link" href="#" data-abc="true">4</a></li>
@@ -243,5 +315,6 @@
     <p>Footer</p>
 </div>
 -->
+
 </body>
 </html>
