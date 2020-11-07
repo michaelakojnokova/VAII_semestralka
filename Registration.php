@@ -1,3 +1,4 @@
+<?php include ('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +21,7 @@
 
 <div class="jumbotron text-center" style="margin-bottom:0">
     <img src="images/logo.png" height="205" width="490" alt="logo"/>
-    <!--   <h1>Wild & Gorgeous</h1>
-       <p>Your daily dose of lifestyle!</p> -->
+
 </div>
 
 
@@ -111,13 +111,16 @@
 
 
 
-
-<form action="action_page.php">
+<form method="post" action="Registration.php">
     <div id="containerRegister" class="container">
 
         <h1 id="h1Register">Register</h1>
         <p id="pRegister">Please fill in this form to create an account.</p>
         <hr>
+        <p><span class="error">* required field</span></p>
+
+        <label for="name"><b>Name</b></label>
+        <input class="rounded" type="text" placeholder="Enter Name" name="name" id="name" >
 
         <label for="email"><b>Email</b></label>
         <input class="rounded" type="text" placeholder="Enter Email" name="email" id="email" required>
@@ -130,7 +133,7 @@
         <hr>
 
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        <button  type="submit" class="registerbtn button5">Register</button>
+        <button name = "register" type="submit" class="registerbtn button5">Register</button>
 
         <div class="container signin">
             <p>Already have an account? <a href="#">Sign in</a>.</p>

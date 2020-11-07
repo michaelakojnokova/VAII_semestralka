@@ -606,13 +606,14 @@ p1 {
     justify-content: right;
 }
 
-/*Register*********************************************************************************************************************
+/*Register**********************************************************************************************************************/
 
 
 
 * {box-sizing: border-box}
 
 /* Add padding to containers */
+
 #containerRegister {
     padding: 50px;
     background-image: url("https://media.istockphoto.com/vectors/pink-marble-background-light-elegant-template-for-wedding-card-baby-vector-id1200907979?k=6&m=1200907979&s=170667a&w=0&h=MDEX31iDfrBwZO-JIqVSYJYmpVAm3ZTBnNurnhYI9oQ=");
@@ -631,11 +632,12 @@ p1 {
 
 
 /* Full-width input fields */
+
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 80%;
     padding: 15px;
     margin: 5px 0 22px 0;
-    display: inline-block;
+    display: flex;
     border: none;
     background: #f7f7f7;
 }
@@ -646,12 +648,14 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 /* Overwrite default styles of hr */
+
 hr {
     border: 1px solid #f7f7f7;
     margin-bottom: 25px;
 }
 
 /* Set a style for the submit/register button */
+
 .registerbtn {
     background-color: #f7f7f7;
     color: black;
@@ -668,11 +672,13 @@ hr {
 }
 
 /* Add a blue text color to links */
+
 a {
-    color: dodgerblue;
+    color: grey;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
+
 .signin {
     background-color: #f7f7f7;
     text-align: center;
@@ -710,4 +716,25 @@ a {
 }
 .btn:active, .btn-info:active, .btn-block :active,.btn-round:active{
     background-color: #ffccc2;
+}
+
+/*register**********************************************************************************************************/
+
+/*////////////////////////////////////////////////*/
+
+.error {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+}
+.success {
+    color: #3c763d;
+    background: #dff0d8;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
 }

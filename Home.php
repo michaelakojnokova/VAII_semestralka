@@ -125,21 +125,21 @@
                             <h4>Login</h4>
                         </div>
                         <div class="d-flex flex-column text-center">
-                            <form>
+                            <form method="post">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                                    <input type="text" name="meno" class="form-control" placeholder="Your email address...">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                                    <input type="password" name="psw" class="form-control" id="password1" placeholder="Your password...">
                                 </div>
-                                <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                                <button type="submit" name="Login" class="btn btn-info btn-block btn-round">Login</button>
                             </form>
 
 
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
-                        <div class="signup-section">Not a member yet? <a href="Register.php" class="text-info"> Sign Up</a>.</div>
+                        <div class="signup-section">Not a member yet? <a href="Registration.php" class="text-info"> Sign Up</a>.</div>
                     </div>
                 </div>
             </div>
@@ -218,10 +218,13 @@
  <hr>
 
 
-            <h6 id="form1">Hey ! Enter your details below to receive blog posts and recipes direct to your inbox. </h6>
+
+
+
+    <h6 id="form1">Hey ! Enter your details below to receive blog posts and recipes direct to your inbox. </h6>
             <br>
             <div id="container12">
-            <form action="/action_page.php">
+            <form action="/Home.php">
                 <div class="form-group">
                     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
                 </div>
