@@ -1,3 +1,4 @@
+<?php include ('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,7 +113,7 @@
 
 <?php
 $nameErr = $emailErr  = $passwordErr = $repeatPasswordErr = "";
-$name = $email = $password = $repeatPassword = "";
+$name = $email  = $password = $repeatPassword = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {

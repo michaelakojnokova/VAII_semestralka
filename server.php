@@ -1,4 +1,5 @@
 <?php
+include 'errors.php';
 session_start();
 
 // initializing variables
@@ -11,7 +12,7 @@ $db = mysqli_connect('localhost', 'root', '', 'vaii_database');
 if($db->connect_error){
     die("Connection failed: " . $db->connect_error);
 }
-echo "Connected successfullz";
+echo "Connected successfully";
 // REGISTER USER
 if (isset($_POST['register'])) {
     // receive all input values from the form
@@ -47,7 +48,7 @@ if (isset($_POST['register'])) {
 
     // Finally, register user if there are no errors in the form
     if (count($errors) == 0) {
-       // $password = md5($password_1);//encrypt the password before saving in the database
+        password_hash("", PASSWORD_DEFAULT);
 
         $query = "INSERT INTO registration (username, email, password) 
   			  VALUES('$username', '$email', '$password_1')";
@@ -77,7 +78,7 @@ if (isset($_POST['Login'])) {
     }
 
     if (count($errors) == 0) {
-        $password = md5($password);
+        password_hash("", PASSWORD_DEFAULT);
         $query = "SELECT * FROM registration WHERE username='$username' AND password='$password'";
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
@@ -98,4 +99,10 @@ if (isset($_POST['Login'])) {
 }
 
 ?>
-
+<?php  if (count($errors) > 0) : ?>
+    <div class="error">
+        <?php foreach ($errors as $error) : ?>
+            <p><?php echo $error ?></p>
+        <?php endforeach ?>
+    </div>
+<?php  endif ?>
