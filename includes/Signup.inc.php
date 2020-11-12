@@ -1,4 +1,4 @@
-<?php// include ('dbh.inc.php') ; //nefunguje include
+<?php include ('dbh.inc.php') ;// include ('dbh.inc.php') ; //nefunguje include
 //cize musim to spravit duplicitne bohuzial
 $serverName = "localhost";
 $dBUsername = "root";
@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     require_once 'functions.inc.php';
 
     if (emptyInputSignup( $email,$username, $password, $passwordRepeat) !== false) { //ak je prazdny , tak error
-        header("location: ../Signup.php?error=emptyinput"); //toto sa ukaze v url ak niekto zabudol dat nieco do form
+        header("location: ../Signup.php?error=emptyInput"); //toto sa ukaze v url ak niekto zabudol dat nieco do form
         exit();
     }
 
@@ -41,7 +41,7 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
-    createUser($conn,$username,$email,$password);
+    createUser($conn,$email,$username,$password);
 
 
 } else {

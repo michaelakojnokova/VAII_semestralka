@@ -131,7 +131,7 @@
         <button name="submit" type="submit" class="registerbtn button5">Log in</button>
 
         <div class="container signin">
-            <p>Don't have an account yet? <a href=Registration.php">Sign up</a>.</p>
+            <p>Don't have an account yet? <a href="Signup.php">Sign up</a>.</p>
         </div>
     </div>
 

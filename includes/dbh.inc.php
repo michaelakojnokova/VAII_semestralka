@@ -12,9 +12,10 @@ $conn = mysqli_connect($serverName,$dBUsername,$dBPassword ,$dBName);
 //if connection fails
 if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
-} /*
+}
 //echo "Connected successfully";
 // REGISTER USER
+/*
 if (isset($_POST['register'])) {
     // receive all input values from the form
     $dBUsername = mysqli_real_escape_string($conn, $_POST['name']);
@@ -101,7 +102,7 @@ if (isset($_POST['Login'])) {
 }
 
 ?>
-<?php  if (count($errors) > 0) : ?>
+/*<?php  if (count($errors) > 0) : ?>
     <div class="error">
         <?php foreach ($errors as $error) : ?>
             <p><?php echo $error ?></p>
