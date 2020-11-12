@@ -102,7 +102,7 @@
 
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="Registration.php">Sign up</a>
+            <a class="nav-link" href="Signup.php">Sign up</a>
         </li>
     </ul>
 

@@ -1,4 +1,4 @@
-<?php include ('server.php') ?>
+<?php include('dbh.inc.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
           type="text/css"/>
-    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
@@ -37,7 +37,7 @@
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 EAT WELL
             </a>
-            <div class="dropdown-menu" >
+            <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Eat well</a>
                 <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
                 <a class="dropdown-item" href="#">Breakfast</a>
@@ -102,7 +102,7 @@
 
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="Registration.php">Sign up</a>
+            <a class="nav-link" href="Signup.php">Sign up</a>
         </li>
     </ul>
 
@@ -116,8 +116,7 @@
 </nav>
 
 
-
-<form method="post" action="Registration.php">
+<form method="post" action="includes/Signup.inc.php">
     <div id="containerRegister" class="container">
 
         <h1 id="h1Register">Register</h1>
@@ -125,8 +124,8 @@
         <hr>
         <p><span class="error">* required field</span></p>
 
-        <label for="name"><b>Name</b></label>
-        <input class="rounded" type="text" placeholder="Enter Name" name="name" id="name" >
+        <label for="username"><b>Username</b></label>
+        <input class="rounded" type="text" placeholder="Enter Username" name="uid" id="username" required>
 
         <label for="email"><b>Email</b></label>
         <input class="rounded" type="text" placeholder="Enter Email" name="email" id="email" required>
@@ -139,7 +138,7 @@
         <hr>
 
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        <button name = "register" type="submit" class="registerbtn button5">Register</button>
+        <button name="submit" type="submit" class="registerbtn button5">Register</button>
 
         <div class="container signin">
             <p>Already have an account? <a href="#">Sign in</a>.</p>
