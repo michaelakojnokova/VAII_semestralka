@@ -41,79 +41,86 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    EAT WELL
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Eat well</a>
-                    <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
-                    <a class="dropdown-item" href="#">Breakfast</a>
-                    <a class="dropdown-item" href="#">Lunch</a>
-                    <a class="dropdown-item" href="#">Dinner</a>
-                    <a class="dropdown-item" href="#">Appetizers</a>
-                    <a class="dropdown-item" href="#">Meat</a>
-                    <a class="dropdown-item" href="#">Vegan</a>
-                    <a class="dropdown-item" href="#">Vegetarian</a>
-                    <a class="dropdown-item" href="#">Baking</a>
-                    <a class="dropdown-item" href="#">Soups</a>
-                    <a class="dropdown-item" href="#">Salads</a>
-                    <a class="dropdown-item" href="#">Dressing&Sauce</a>
-                    <a class="dropdown-item" href="#">Drinks</a>
-                    <a class="dropdown-item" href="#">Asian</a>
-                    <a class="dropdown-item" href="#">Fish</a>
-                    <a class="dropdown-item" href="#">Pizza</a>
-                    <a class="dropdown-item" href="#">BBQ</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    LIFESTYLE
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Fashion</a>
-                    <a class="dropdown-item" href="#">Travel destinations</a>
-                    <a class="dropdown-item" href="#">Tips</a>
-                    <a class="dropdown-item" href="#">DIY</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    WORK WELL
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Mind</a>
-                    <a class="dropdown-item" href="#">Productivity</a>
-                    <a class="dropdown-item" href="#">Organizing ideas</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    LIVE WELL
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Movement</a>
-                    <a class="dropdown-item" href="#">Beauty&Skincare</a>
-                    <a class="dropdown-item" href="#">Green living</a>
-                </div>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="AboutMe.php">About me</a>
-            </li>
-        </ul>
-        <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-        </svg>
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                EAT WELL
+            </a>
+            <div class="dropdown-menu" >
+                <a class="dropdown-item" href="#">Eat well</a>
+                <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
+                <a class="dropdown-item" href="#">Breakfast</a>
+                <a class="dropdown-item" href="#">Lunch</a>
+                <a class="dropdown-item" href="EatWellDinners.php">Dinner</a>
+                <a class="dropdown-item" href="#">Appetizers</a>
+                <a class="dropdown-item" href="#">Meat</a>
+                <a class="dropdown-item" href="#">Vegan</a>
+                <a class="dropdown-item" href="#">Vegetarian</a>
+                <a class="dropdown-item" href="#">Baking</a>
+                <a class="dropdown-item" href="#">Soups</a>
+                <a class="dropdown-item" href="#">Salads</a>
+                <a class="dropdown-item" href="#">Dressing&Sauce</a>
+                <a class="dropdown-item" href="#">Drinks</a>
+                <a class="dropdown-item" href="#">Asian</a>
+                <a class="dropdown-item" href="#">Fish</a>
+                <a class="dropdown-item" href="#">Pizza</a>
+                <a class="dropdown-item" href="#">BBQ</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LIFESTYLE
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Fashion</a>
+                <a class="dropdown-item" href="#">Travel destinations</a>
+                <a class="dropdown-item" href="#">Tips</a>
+                <a class="dropdown-item" href="#">DIY</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                WORK WELL
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Mind</a>
+                <a class="dropdown-item" href="#">Productivity</a>
+                <a class="dropdown-item" href="#">Organizing ideas</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LIVE WELL
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Movement</a>
+                <a class="dropdown-item" href="#">Beauty&Skincare</a>
+                <a class="dropdown-item" href="#">Green living</a>
+            </div>
+        </li>
+    </ul>
 
-    </div>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="AboutMe.php">About me</a>
+        </li>
+    </ul>
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Registration.php">Sign up</a>
+        </li>
+    </ul>
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Login.php">Log in</a>
+        </li>
+    </ul>
 </nav>
 
 <!-- Post -->

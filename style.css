@@ -1,4 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium);
+ @import url(//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium);
 @import url(//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora);
 /*Home***************************************************************************************************************************/
 h1 {
@@ -697,7 +697,7 @@ a {
     padding: 16px 20px;
 }
 
-/*SignIN**********************************************************************************************************/
+/*LogIN**********************************************************************************************************/
 
 #containerLogin1,#containerLogin2,#containerLogin3,#containerLogin4,#containerLogin5{
     width: 5px;
@@ -718,23 +718,4 @@ a {
     background-color: #ffccc2;
 }
 
-/*register**********************************************************************************************************/
-
-/*////////////////////////////////////////////////*/
-
-.error {
-    width: 92%;
-    margin: 0px auto;
-    padding: 10px;
-    border: 1px solid #a94442;
-    color: #a94442;
-    background: #f2dede;
-    border-radius: 5px;
-    text-align: left;
-}
-.success {
-    color: #3c763d;
-    background: #dff0d8;
-    border: 1px solid #3c763d;
-    margin-bottom: 20px;
-}
+/***********************************************************************************************************/
