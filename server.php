@@ -1,5 +1,4 @@
 <?php
-include 'errors.php';
 session_start();
 
 // initializing variables
@@ -12,7 +11,7 @@ $db = mysqli_connect('localhost', 'root', '', 'vaii_database');
 if($db->connect_error){
     die("Connection failed: " . $db->connect_error);
 }
-echo "Connected successfully";
+//echo "Connected successfully";
 // REGISTER USER
 if (isset($_POST['register'])) {
     // receive all input values from the form
@@ -24,8 +23,9 @@ if (isset($_POST['register'])) {
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($username)) { array_push($errors, "Username is required"); }
-    if (empty($email)) { array_push($errors, "Email is required"); }
+    if (empty($email)) { array_push($errors, "Email is required");}
     if (empty($password_1)) { array_push($errors, "Password is required"); }
+    if (empty($password_2)) { array_push($errors, "Password is required"); }
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
     }

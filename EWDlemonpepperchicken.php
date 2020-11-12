@@ -200,14 +200,18 @@
                     <div class="col-sm-10">
                         <h4>Terka <small>Sep 27, 2020, 9:12 PM</small></h4>
                         <p>Well, I will be honest with you. Even my dog refused to eat this. </p>
-                        <br>
+                        <a class="reply-btn" href="#" >reply</a>
+
                     </div>
+                    <br>
+                    <br>
                     <div class="col-sm-2 text-center">
                         <img src="images/lubos.jpg" class="rounded-circle" height="65" width="65" alt="lubos">
                     </div>
                     <div class="col-sm-10">
                         <h4>Ľuboš <small>Sep 28, 2020, 8:25 PM</small></h4>
                         <p>It's delicious and simple! Tasted nicer than I though it would. Thanks for this. </p>
+                        <a class="reply-btn" href="#" >reply</a>
                         <br>
 
                         <div class="row">
@@ -217,6 +221,7 @@
                             <div class="col-xs-10">
                                 <h4>Terka <small>Sep 28, 2020, 8:28 PM</small></h4>
                                 <p>Don't lie to her, please.</p>
+                                <a class="reply-btn" href="#" >reply</a>
                                 <br>
                             </div>
                         </div>
