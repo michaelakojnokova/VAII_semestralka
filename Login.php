@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +14,15 @@
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
           type="text/css"/>
-    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
+    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
     <img src="images/logo.png" height="205" width="490" alt="logo"/>
-
+    <!--   <h1>Wild & Gorgeous</h1>
+       <p>Your daily dose of lifestyle!</p> -->
 </div>
-
 
 <nav class="navbar navbar-expand-lg navbar-light ">
     <a class="navbar-brand" href="Home.php">Home</a>
@@ -37,7 +36,7 @@
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 EAT WELL
             </a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu" >
                 <a class="dropdown-item" href="#">Eat well</a>
                 <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
                 <a class="dropdown-item" href="#">Breakfast</a>
@@ -111,37 +110,28 @@
             <a class="nav-link" href="Login.php">Log in</a>
         </li>
     </ul>
-
-
 </nav>
 
 
-<form method="post" action="includes/Signup.inc.php">
+<form method="post" action="includes/Login.inc.php">
     <div id="containerRegister" class="container">
 
-        <h1 id="h1Register">Register</h1>
+        <h1 id="h1Register">Log in</h1>
         <p id="pRegister">Please fill in this form to create an account.</p>
         <hr>
         <p><span class="error">* required field</span></p>
 
         <label for="username"><b>Username</b></label>
-        <input class="rounded" type="text" placeholder="Enter Username" name="uid" id="username" required>
-
-        <label for="email"><b>Email</b></label>
-        <input class="rounded" type="text" placeholder="Enter Email" name="email" id="email" required>
+        <input class="rounded" type="text" placeholder="Enter Username" name="username" id="username" required>
 
         <label for="psw"><b>Password</b></label>
         <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input class="rounded" type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
         <hr>
 
-        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        <button name="submit" type="submit" class="registerbtn button5">Register</button>
+        <button name="submit" type="submit" class="registerbtn button5">Log in</button>
 
         <div class="container signin">
-            <p>Already have an account? <a href="#">Sign in</a>.</p>
+            <p>Don't have an account yet? <a href=Registration.php">Sign up</a>.</p>
         </div>
     </div>
 
@@ -150,8 +140,5 @@
 
 </form>
 
-
 </body>
 </html>
-
-
