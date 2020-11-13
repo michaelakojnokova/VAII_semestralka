@@ -23,6 +23,12 @@ p1 {
     font-size: 120%;
 }
 
+ #SignLoginLink {
+     font-family: "Engravers MT";
+     color: black;
+     font-size: 120%;
+ }
+
 .navbar-brand {
     color: black;
     font-family: "Engravers MT";

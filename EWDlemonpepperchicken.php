@@ -110,6 +110,39 @@
         </li>
     </ul>
 
+    <?php //toto dám do každého menu ktoré mám
+    if (isset($_SESSION["useruid"])){ //existuje to ? ak ano,user je logged in
+        echo '<ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Profile.php">Profile</a>
+        </li>
+    </ul> ';
+
+        echo '    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Logout.php">Log out</a>
+        </li>
+    </ul>';
+    }
+
+    else{
+        echo '<ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Signup.php">Sign up</a>
+        </li>
+    </ul> ';
+
+        echo '    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Login.php">Log in</a>
+        </li>
+    </ul>';
+    }
+    ?>
+
+</nav>
+<!--
+
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="Signup.php">Sign up</a>
@@ -122,7 +155,7 @@
         </li>
     </ul>
 
-</nav>
+-->
 
 <!-- Post -->
 <article>

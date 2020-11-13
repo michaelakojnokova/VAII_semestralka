@@ -14,7 +14,7 @@
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
           type="text/css"/>
-    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
@@ -36,7 +36,7 @@
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 EAT WELL
             </a>
-            <div class="dropdown-menu" >
+            <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Eat well</a>
                 <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
                 <a class="dropdown-item" href="#">Breakfast</a>
@@ -99,6 +99,39 @@
         </li>
     </ul>
 
+    <?php //toto dám do každého menu ktoré mám
+    if (isset($_SESSION["useruid"])){ //existuje to ? ak ano,user je logged in
+        echo '<ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Profile.php">Profile</a>
+        </li>
+    </ul> ';
+
+        echo '    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Logout.php">Log out</a>
+        </li>
+    </ul>';
+    }
+
+    else{
+        echo '<ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Signup.php">Sign up</a>
+        </li>
+    </ul> ';
+
+        echo '    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Login.php">Log in</a>
+        </li>
+    </ul>';
+    }
+    ?>
+
+</nav>
+<!--
+
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="Signup.php">Sign up</a>
@@ -110,7 +143,8 @@
             <a class="nav-link" href="Login.php">Log in</a>
         </li>
     </ul>
-</nav>
+
+-->
 
 
 <form method="post" action="includes/Login.inc.php">
@@ -119,13 +153,24 @@
         <h1 id="h1Register">Log in</h1>
         <p id="pRegister">Please fill in this form to create an account.</p>
         <hr>
-        <p><span class="error">* required field</span></p>
+        <div id="errors">
+            <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "emptyInput") { //pozrieme sa do URL či je erorr prazdny
+                    echo "<p> Fill in all fields !</p>";
+                } elseif ($_GET["error"] == "wrongLogin") {
+                    echo "<p>Incorrect login informations !</p>";
+                }
+            }
+            ?>
+        </div>
+
 
         <label for="username"><b>Username</b></label>
-        <input class="rounded" type="text" placeholder="Enter Username" name="username" id="username" required>
+        <input class="rounded" type="text" placeholder="Enter Username" name="username" id="username" >
 
         <label for="psw"><b>Password</b></label>
-        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw" >
         <hr>
 
         <button name="submit" type="submit" class="registerbtn button5">Log in</button>

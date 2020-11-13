@@ -121,7 +121,7 @@ function loginUser($conn, $username, $password)
     }
     elseif ($checkPassword === true){
         session_start();
-        $_SESSION["userId"] = $uidExists["usersId"];
+        $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUid"];
         header("location: ../Home.php"); //toto sa ukaze v url
         exit();

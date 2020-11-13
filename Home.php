@@ -98,6 +98,38 @@
             <a class="nav-link" href="AboutMe.php">About me</a>
         </li>
     </ul>
+<?php //toto dám do každého menu ktoré mám
+if (isset($_SESSION["useruid"])){ //existuje to ? ak ano,user je logged in
+echo '<ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Profile.php">Profile</a>
+        </li>
+    </ul> ';
+
+echo '    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Logout.php">Log out</a>
+        </li>
+    </ul>';
+}
+
+else{
+    echo '<ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Signup.php">Sign up</a>
+        </li>
+    </ul> ';
+
+echo '    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Login.php">Log in</a>
+        </li>
+    </ul>';
+}
+?>
+
+</nav>
+<!--
 
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -111,7 +143,7 @@
         </li>
     </ul>
 
-
+-->
 
 <!-- SRDIECKOOO
     <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
