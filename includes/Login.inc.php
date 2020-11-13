@@ -16,16 +16,6 @@ if (isset($_POST["submit"])) {
         header("location: ../Login.php?error=emptyInput"); //toto sa ukaze v url ak niekto zabudol dat nieco do form
         exit();
     }
-/*
-    if (invalidUid($username) !== false) { //ak nie je validne username, tak error
-        header("location: ../Signup.php?error=invalidUid"); //toto sa ukaze v url
-        exit();
-    }
-    if (pwdMatch($password) !== false) { //
-        header("location: ../Signup.php?error=passwordsDontMatch"); //toto sa ukaze v url
-        exit();
-    }
-    */
     loginUser($conn, $username,$password);
 }
 else {

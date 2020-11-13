@@ -23,11 +23,7 @@ p1 {
     font-size: 120%;
 }
 
- #SignLoginLink {
-     font-family: "Engravers MT";
-     color: black;
-     font-size: 120%;
- }
+
 
 .navbar-brand {
     color: black;
@@ -733,3 +729,11 @@ a {
     text-decoration-line: underline;
 
 }
+ #errors2{
+     font-family: "Yu Gothic UI Light";
+     font-size: 25px;
+     text-align: center;
+     color: grey;
+     text-decoration-line: underline;
+
+ }

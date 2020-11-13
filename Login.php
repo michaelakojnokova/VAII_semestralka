@@ -154,7 +154,6 @@ session_start();
     <div id="containerRegister" class="container">
 
         <h1 id="h1Register">Log in</h1>
-        <p id="pRegister">Please fill in this form to create an account.</p>
         <hr>
         <div id="errors">
             <?php
