@@ -1,4 +1,4 @@
-<?php include ('Signup.inc.php') ;
+<?php include('Signup.inc.php');
 $email = $_POST["email"];
 $username = $_POST["uid"];
 $password = $_POST["psw"];
@@ -91,4 +91,26 @@ function createUser($conn, $email, $username, $password)
     mysqli_stmt_close($stmt);
     header("location: ../Signup.php?error=none"); //toto sa ukaze v url
     exit();
+}
+
+//Login
+function emptyInputLogin($username, $password)
+{
+    $result = "";
+    if (empty($username) || empty($password)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function loginUser($conn, $username, $password)
+{
+$uidExists = uidExists($conn, $username, $username);
+
+if ($uidExists === false){
+    header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
+    exit();
+}
 }
