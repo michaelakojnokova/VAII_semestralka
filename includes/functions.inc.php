@@ -107,10 +107,23 @@ function emptyInputLogin($username, $password)
 
 function loginUser($conn, $username, $password)
 {
-$uidExists = uidExists($conn, $username, $username);
+    $uidExists = uidExists($conn, $username, $username);
 
-if ($uidExists === false){
-    header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
-    exit();
-}
+    if ($uidExists === false) {
+        header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
+        exit();
+    }
+    $passwordHashed = $uidExists["usersPwd"];
+    $checkPassword = password_verify($password, $passwordHashed);
+    if ($checkPassword === false) { //user wrote wrong password
+        header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
+        exit();
+    }
+    elseif ($checkPassword === true){
+        session_start();
+        $_SESSION["userId"] = $uidExists["usersId"];
+        $_SESSION["useruid"] = $uidExists["usersUid"];
+        header("location: ../Home.php"); //toto sa ukaze v url
+        exit();
+    }
 }
