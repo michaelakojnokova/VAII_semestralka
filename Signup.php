@@ -125,7 +125,7 @@
         <?php
         if (isset($_GET["error"])) {
             if ($_GET["error"] == "emptyInput") { //pozrieme sa do URL či je erorr prazdny
-                echo "<p> Fill in all fields </p>";
+                echo "<p> Fill in all fields !</p>";
             } elseif ($_GET["error"] == "invalidUid") {
                 echo "<p>Choose a proper username !</p>";
             }
