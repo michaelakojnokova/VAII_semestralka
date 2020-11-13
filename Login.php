@@ -168,11 +168,10 @@ session_start();
             ?>
         </div>
 
-
         <label for="username"><b>Username</b></label>
-        <input class="rounded" type="text" placeholder="Enter Username" name="username" id="username" >
+        <input class="rounded" type="text" placeholder="Enter Username/Email" name="uid" id="username" >
 
-        <label for="psw"><b>Password</b></label>
+        <label for="password"><b>Password</b></label>
         <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw" >
         <hr>
 
