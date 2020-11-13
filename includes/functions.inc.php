@@ -1,4 +1,4 @@
-<?php include('Signup.inc.php');
+<?php
 $email = $_POST["email"];
 $username = $_POST["uid"];
 $password = $_POST["psw"];
