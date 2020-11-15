@@ -866,8 +866,11 @@ a {
      margin: 0;
      font-size: 16px;
      color: #555555;
- }
 
+ }
+.write_comment col-lg-8 col-md-10 mx-auto{
+     background-color: #ffe1e3;
+}
 
  .comments .comment .date {
      color: #888888;
@@ -875,7 +878,9 @@ a {
  }
  .comments .comment .content {
     margin-left: 0px;
-    text-align: left;
+  /*  text-align: left;*/
+     display: flex;
+     justify-content: left;
 
  }
  .comments .comment .reply_comment_btn {
@@ -898,5 +903,11 @@ a {
  }
 
  .write_comment_btn{
-font-family: "Lora;
+     font-family: "Lora";
+ }
+ #submitBtn{
+     background-color: #ffe1e3;
+ }
+ #nameBtn{
+     background-color: #ffe1e3;
  }

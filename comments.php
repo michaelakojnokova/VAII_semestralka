@@ -43,6 +43,7 @@ function show_comments($comments, $parent_id = -1) {
         if ($comment['parent_id'] == $parent_id) {
             // Add the comment to the $html variable
             $html .= '
+<link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
             <div class="comment col-lg-8 col-md-10 mx-auto">
          
                 <div>
@@ -64,13 +65,13 @@ function show_comments($comments, $parent_id = -1) {
 
 // This function is the template for the write comment form
 function show_write_comment_form($parent_id = -1) {
-    $html = '
+    $html = '<link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <div class="write_comment col-lg-8 col-md-10 mx-auto" data-comment-id="' . $parent_id . '">
         <form>
             <input name="parent_id" type="hidden" value="' . $parent_id . '">
-            <input name="name" type="text" placeholder="Your Name" required>
-            <textarea name="content" placeholder="Write your comment here..." required></textarea>
-            <button type="submit">Submit Comment</button>
+            <input id="nameBtn " name="name" type="text" placeholder="Your Name" required>
+            <textarea  name="content" placeholder="Write your comment here..." required></textarea>
+            <button id="submitBtn" type="submit">Submit Comment</button>
         </form>
     </div>
     ';
