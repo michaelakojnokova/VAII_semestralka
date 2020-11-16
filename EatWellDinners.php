@@ -114,7 +114,7 @@ session_start();
 
         echo '    <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="Logout.php">Log out</a>
+            <a class="nav-link" href="includes/Logout.inc.php">Log out</a>
         </li>
     </ul>';
     }
