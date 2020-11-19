@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 function setComments($conn)
 {
     // $conn = mysqli_connect('localhost','root','','vaii_database');
@@ -20,11 +20,49 @@ function getComments($conn)
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
         echo "<div class='comment-box'><p>";
-            echo $row['uid'] . "<br>";
-            echo $row['date'] . "<br>";
-            echo nl2br($row['message']) ; //breaks line
-        echo "</p></div>";
+        echo $row['uid'] . "<br>";
+        echo $row['date'] . "<br>";
+        echo nl2br($row['message']); //breaks line
+        echo "</p>
+<form class='delete-form' method='post' action='".deleteComments($conn)."'>  <!--zobrali sme co mame napisane v komente aby to bolo predvyplnene ked to budem chciet editnut-->
+             <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
+            <button type='submit' name='commentDelete'>Delete</button>
+</form>
+            <form class='edit-form' method='post' action='editcomment.php'>  <!--zobrali sme co mame napisane v komente aby to bolo predvyplnene ked to budem chciet editnut-->
+             <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
+              <input type='hidden' name='uid' value='" . $row['uid'] . "'>
+               <input type='hidden' name='date' value='" . $row['date'] . "'>
+                <input type='hidden' name='message' value='" . $row['message'] . "'>
+            <button>Edit</button>
+</form>
+</div>";
     }
+}
 
+function editComments($conn)
+{
 
+    if (isset($_POST['commentSubmit'])) {
+        $cid = $_POST['cid'];
+        $uid = $_POST['uid'];
+        $date = $_POST['date'];
+        $message = $_POST['message'];
+
+        $sql = "UPDATE comments SET message=' $message' WHERE cid = '$cid' ";
+        $result = $conn->query($sql);
+        header("Location: EWDlemonpepperchicken.php");
+
+    }
+}
+
+function deleteComments($conn) {
+
+    if (isset($_POST['commentDelete'])) {
+        $cid = $_POST['cid'];
+
+        $sql = " DELETE FROM comments WHERE cid='$cid' ";
+        $result = $conn->query($sql);
+        header("Location: EWDlemonpepperchicken.php");
+
+    }
 }

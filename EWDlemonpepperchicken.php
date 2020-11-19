@@ -21,7 +21,7 @@ $conn = mysqli_connect('localhost','root','','vaii_database');
           type="text/css">-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
-    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+   <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
