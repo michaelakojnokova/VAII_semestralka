@@ -102,7 +102,7 @@ session_start();
         </li>
     </ul>
 
-    <?php //toto dám do každého menu ktoré mám
+    <?php
     if (isset($_SESSION["useruid"])){ //existuje to ? ak ano,user je logged in
         echo '<ul class="navbar-nav">
         <li class="nav-item">
@@ -133,21 +133,6 @@ session_start();
     ?>
 
 </nav>
-<!--
-
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="Signup.php">Sign up</a>
-        </li>
-    </ul>
-
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="Login.php">Log in</a>
-        </li>
-    </ul>
-
--->
 
 
 <form method="post" action="includes/Login.inc.php">
@@ -171,7 +156,7 @@ session_start();
         <input class="rounded" type="text" placeholder="Enter Username/Email" name="uid" id="username" >
 
         <label for="password"><b>Password</b></label>
-        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw" >
+        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw"  >
         <hr>
 
         <button name="submit" type="submit" class="registerbtn button5">Log in</button>

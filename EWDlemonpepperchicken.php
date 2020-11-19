@@ -1,6 +1,12 @@
 <?php
 session_start();
+date_default_timezone_set('Europe/Bratislava');
+require_once 'includes/dbh.inc.comments.php';
+require_once 'includes/comments.inc.php';
+$conn = mysqli_connect('localhost','root','','vaii_database');
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -223,6 +229,9 @@ session_start();
                 </ol>
                 <br><br>
             </div>
+
+
+
 <!-- COMMENT AND REPLY SYSTEM
             <div class="col-sm-8">
                 <h5>Leave a Comment:</h5>
@@ -277,9 +286,28 @@ session_start();
 -->
 </article>
 
-<hr>
 
+
+<hr>
+<?php
+echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
+<form method='post' action='".setComments($conn)."'>
+    <input type='hidden' name='uid' value='Anonymous'>
+    <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+    <textarea style='resize: none' name='message' placeholder='Write your comment here...'> </textarea><br>
+    <button id='submitBtn1' name='commentSubmit' type='submit'>Submit comment</button>
+    <br><br>
+
+</form>
+</div>";
+
+getComments($conn);
+?>
+
+
+<!--
 <div class="comments"></div>
+
 
 <script>
     const comments_page_id = 1; // This number should be unique on every page
@@ -306,5 +334,6 @@ session_start();
         });
     });
 </script>
+-->
 </body>
 </html>

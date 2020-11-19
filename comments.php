@@ -50,6 +50,8 @@ function show_comments($comments, $parent_id = -1) {
                     <h3 class="name">' . htmlspecialchars($comment['name'], ENT_QUOTES) . '</h3>
                     <span class="date">' . time_elapsed_string($comment['submit_date']) . '</span>
                 </div>
+                <a class="edit.php" href="" >Edit</a>
+                <a class="delete.php" value = "'.$comment['id'] .'" ">Delete</a>
                 <p class="content">' . nl2br(htmlspecialchars($comment['content'], ENT_QUOTES)) . '</p>
                 <a class="reply_comment_btn" href="#" data-comment-id="' . $comment['id'] . '">Reply</a>
                 ' . show_write_comment_form($comment['id']) . '

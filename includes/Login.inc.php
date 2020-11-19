@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
     require_once 'functions.inc.php';
 
     if (emptyInputLogin( $username, $password) !== false) { //ak je prazdny , tak error
-        header("location: ../Login.php?error=emptyInput"); //toto sa ukaze v url ak niekto zabudol dat nieco do form
+        header("location: ../Login.php?error=emptyInput");
         exit();
     }
     loginUser($conn, $username,$password);

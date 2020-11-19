@@ -21,12 +21,12 @@ if (isset($_POST["submit1"])) {
     }
 
     if (invalidUid($username) !== false) { //ak nie je validne username, tak error
-        header("location: ../Signup.php?error=invalidUid"); //toto sa ukaze v url
+        header("location: ../Signup.php?error=invalidUid");
         exit();
     }
 
     if (invalidEmail($email) !== false) { //ak nie je validny mail , tak error
-        header("location: ../Signup.php?error=invalidEmail"); //toto sa ukaze v url
+        header("location: ../Signup.php?error=invalidEmail");
         exit();
     }
 

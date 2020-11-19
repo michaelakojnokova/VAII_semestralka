@@ -58,8 +58,10 @@ function uidExists($conn, $username, $email)
 {
     $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
+
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Signup.php?error=stmtFailed"); //toto sa ukaze v url
+        header("location: ../Signup.php?error=stmtFailed");
+
         exit();
     }
     mysqli_stmt_bind_param($stmt, "ss", $username, $email);
@@ -89,7 +91,7 @@ function createUser($conn, $email, $username, $password)
     mysqli_stmt_bind_param($stmt, "sss", $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../Signup.php?error=none"); //toto sa ukaze v url
+    header("location: ../Signup.php?error=none");
     exit();
 }
 
@@ -109,7 +111,7 @@ function loginUser($conn, $username, $password)
 {
     $uidExists = uidExists($conn, $username, $username);
 
-    if ($uidExists === false) {
+    if ($uidExists === false) { //ak sa neregistroval, login nie je ulozeny v databaze cize false
         header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
         exit();
     }
@@ -118,8 +120,8 @@ function loginUser($conn, $username, $password)
     if ($checkPassword === false) { //user wrote wrong password
         header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
         exit();
-    }
-    elseif ($checkPassword === true){
+
+    } elseif ($checkPassword === true) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUid"];

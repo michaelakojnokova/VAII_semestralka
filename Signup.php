@@ -133,21 +133,6 @@ session_start();
     ?>
 
 </nav>
-<!--
-
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="Signup.php">Sign up</a>
-        </li>
-    </ul>
-
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="Login.php">Log in</a>
-        </li>
-    </ul>
-
--->
 
 
 <form method="post" action="includes/Signup.inc.php">
@@ -182,16 +167,16 @@ session_start();
             ?>
         </div>
         <label for="username"><b>Username</b></label>
-        <input class="rounded" type="text" placeholder="Enter Username" name="uid" id="username" >
+        <input class="rounded" type="text" placeholder="Enter Username" name="uid" id="username"  >
 
         <label for="email"><b>Email</b></label>
-        <input class="rounded" type="text" placeholder="Enter Email" name="email" id="email" >
+        <input class="rounded" type="text" placeholder="Enter Email" name="email" id="email"  >
 
         <label for="psw"><b>Password</b></label>
-        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw" >
+        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw"  >
 
         <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input class="rounded" type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat">
+        <input class="rounded" type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" >
         <hr>
 
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
