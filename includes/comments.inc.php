@@ -35,7 +35,7 @@ function getComments($conn)
                 <input type='hidden' name='message' value='" . $row['message'] . "'>
             <button>Edit</button>
 </form>
-</div>";
+</div> <br>";
     }
 }
 
