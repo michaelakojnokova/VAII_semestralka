@@ -232,58 +232,7 @@ $conn = mysqli_connect('localhost','root','','vaii_database');
 
 
 
-<!-- COMMENT AND REPLY SYSTEM
-            <div class="col-sm-8">
-                <h5>Leave a Comment:</h5>
-                <form>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </form>
-                <br><br>
 
-                <p><span class="badge"></span> Comments:</p><br>
-
-                <div class="row">
-                    <div class="col-sm-2 text-center">
-                        <img src="images/terka.jpg" class="rounded-circle" height="65" width="65" alt="terka">
-                    </div>
-                    <div class="col-sm-10">
-                        <h4>Terka <small>Sep 27, 2020, 9:12 PM</small></h4>
-                        <p>Well, I will be honest with you. Even my dog refused to eat this. </p>
-                        <a class="reply-btn" href="#" >reply</a>
-
-                    </div>
-                    <br>
-                    <br>
-                    <div class="col-sm-2 text-center">
-                        <img src="images/lubos.jpg" class="rounded-circle" height="65" width="65" alt="lubos">
-                    </div>
-                    <div class="col-sm-10">
-                        <h4>Ľuboš <small>Sep 28, 2020, 8:25 PM</small></h4>
-                        <p>It's delicious and simple! Tasted nicer than I though it would. Thanks for this. </p>
-                        <a class="reply-btn" href="#" >reply</a>
-                        <br>
-
-                        <div class="row">
-                            <div class="col-sm-2 text-center">
-                                <img src="images/terka.jpg" class="rounded-circle" height="65" width="65" alt="terka">
-                            </div>
-                            <div class="col-xs-10">
-                                <h4>Terka <small>Sep 28, 2020, 8:28 PM</small></h4>
-                                <p>Don't lie to her, please.</p>
-                                <a class="reply-btn" href="#" >reply</a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            </div>
--->
 </article>
 
 
@@ -305,35 +254,5 @@ getComments($conn);
 ?>
 
 
-<!--
-<div class="comments"></div>
-
-
-<script>
-    const comments_page_id = 1; // This number should be unique on every page
-    fetch("comments.php?page_id=" + comments_page_id).then(response => response.text()).then(data => {
-        document.querySelector(".comments").innerHTML = data;
-        document.querySelectorAll(".comments .write_comment_btn, .comments .reply_comment_btn").forEach(element => {
-            element.onclick = event => {
-                event.preventDefault();
-                document.querySelectorAll(".comments .write_comment").forEach(element => element.style.display = 'none');
-                document.querySelector("div[data-comment-id='" + element.getAttribute("data-comment-id") + "']").style.display = 'block';
-                document.querySelector("div[data-comment-id='" + element.getAttribute("data-comment-id") + "'] input[name='name']").focus();
-            };
-        });
-        document.querySelectorAll(".comments .write_comment form").forEach(element => {
-            element.onsubmit = event => {
-                event.preventDefault();
-                fetch("comments.php?page_id=" + comments_page_id, {
-                    method: 'POST',
-                    body: new FormData(element)
-                }).then(response => response.text()).then(data => {
-                    element.parentElement.innerHTML = data;
-                });
-            };
-        });
-    });
-</script>
--->
 </body>
 </html>
