@@ -24,7 +24,7 @@ function getComments($conn)
         echo $row['date'] . "<br>";
         echo nl2br($row['message']); //breaks line
         echo "</p>
-<form class='delete-form' method='post' action='".deleteComments($conn)."'>  <!--zobrali sme co mame napisane v komente aby to bolo predvyplnene ked to budem chciet editnut-->
+<form class='delete-form' method='post' action='".deleteComments($conn)."'>  
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
             <button type='submit' name='commentDelete'>Delete</button>
 </form>

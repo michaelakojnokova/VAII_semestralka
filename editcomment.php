@@ -49,7 +49,7 @@ echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
  <input type='hidden' name='cid' value='".$cid."'>
     <input type='hidden' name='uid' value='".$uid."'>
     <input type='hidden' name='date' value='".$date."'>
-    <textarea style='resize: none' name='message' > ".$message." </textarea><br>
+    <textarea style='resize: none' name='message' >".$message."</textarea><br>
     <button id='submitBtn1' name='commentSubmit' type='submit'>Edit comment</button>
     <br><br>
 
