@@ -2,7 +2,7 @@
 ob_start();
 function setComments($conn)
 {
-    // $conn = mysqli_connect('localhost','root','','vaii_database');
+
 
     if (isset($_POST['commentSubmit'])) {
         $uid = $_POST['uid'];
