@@ -987,3 +987,9 @@ a {
  .delete-form button:hover{
      opacity: 1;
  }
+ #information{
+     font-family: "Segoe UI";
+     font-style: italic;
+     text-align: center;
+ }
+

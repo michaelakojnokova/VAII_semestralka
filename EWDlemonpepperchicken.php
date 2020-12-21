@@ -239,7 +239,8 @@ $conn = mysqli_connect('localhost','root','','vaii_database');
 
 <hr>
 <?php
-echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
+    if(isset($_SESSION['useruid'])) { //musim bzt prihlasena ak chcem komentovat, inak vypise hlasku
+        echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
 <form method='post' action='".setComments($conn)."'>
     <input type='hidden' name='uid' value='Anonymous'>
     <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
@@ -249,6 +250,10 @@ echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
 
 </form>
 </div>";
+    }
+    else{
+        echo "<div id = information  > You need to be logged in to comment !  </div> <br><br>";
+    }
 
 getComments($conn);
 ?>
