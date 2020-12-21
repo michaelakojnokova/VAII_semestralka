@@ -29,7 +29,7 @@ function getComments($conn)
             echo nl2br($row['message']);
             echo "</p>";
             if (isset($_SESSION['useruid'])) {
-                if ($_SESSION['useruid'] == $row2['usersUid']) {
+                if ($_SESSION['useruid'] == $row2['usersUid']) { //zhoduje sa vysledok z databazy s ID v session?
                     echo " <form class='delete-form' method='post' action='" . deleteComments($conn) . "'>  
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
             <button type='submit' name='commentDelete'>Delete</button>
@@ -42,9 +42,7 @@ function getComments($conn)
             <button>Edit</button>
             </form>";
                 }
-
             }
-
 
             echo "</div> <br>";
         }

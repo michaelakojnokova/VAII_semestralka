@@ -1,4 +1,4 @@
- @import url(//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium);
+@import url(//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium);
 @import url(//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora);
 /*Home***************************************************************************************************************************/
 h1 {
@@ -22,7 +22,6 @@ p1 {
     color: black;
     font-size: 120%;
 }
-
 
 
 .navbar-brand {
@@ -612,8 +611,9 @@ p1 {
 /*Signup**********************************************************************************************************************/
 
 
-
-* {box-sizing: border-box}
+* {
+    box-sizing: border-box
+}
 
 /* Add padding to containers */
 
@@ -622,12 +622,14 @@ p1 {
     background-image: url("https://media.istockphoto.com/vectors/pink-marble-background-light-elegant-template-for-wedding-card-baby-vector-id1200907979?k=6&m=1200907979&s=170667a&w=0&h=MDEX31iDfrBwZO-JIqVSYJYmpVAm3ZTBnNurnhYI9oQ=");
 
 }
-#h1Register{
+
+#h1Register {
     text-align: center;
     font-family: "Yu Gothic UI Light";
     font-size: 45px;
 }
-#pRegister{
+
+#pRegister {
     text-align: center;
 
     font-size: 15px;
@@ -688,13 +690,15 @@ a {
 
     border: none;
     cursor: pointer;
-   height: 60px;
+    height: 60px;
     opacity: 0.9;
 }
-.registerbtn ,.button5{
+
+.registerbtn, .button5 {
     border-radius: 4px;
 }
-.signin{
+
+.signin {
     border-radius: 4px;
     width: 300px;
     padding: 16px 20px;
@@ -702,27 +706,30 @@ a {
 
 /*LogIN**********************************************************************************************************/
 
-#containerLogin1,#containerLogin2,#containerLogin3,#containerLogin4,#containerLogin5{
+#containerLogin1, #containerLogin2, #containerLogin3, #containerLogin4, #containerLogin5 {
     width: 5px;
     height: 38px;
     display: flex;
     justify-content: right;
     padding-right: 5px;
 }
-.btn, .btn-info, .btn-block ,.btn-round{
+
+.btn, .btn-info, .btn-block, .btn-round {
     color: white;
     background-color: #ffe1e3;
     border: none;
 }
-.btn:hover, .btn-info:hover, .btn-block :hover,.btn-round:hover{
+
+.btn:hover, .btn-info:hover, .btn-block :hover, .btn-round:hover {
     background-color: #ffccc2;
 }
-.btn:active, .btn-info:active, .btn-block :active,.btn-round:active{
+
+.btn:active, .btn-info:active, .btn-block :active, .btn-round:active {
     background-color: #ffccc2;
 }
 
 /*SIGNUP AND LOGIN **********************************************************************************************************/
-#errors{
+#errors {
     font-family: "Yu Gothic UI Light";
     font-size: 25px;
     text-align: center;
@@ -730,266 +737,303 @@ a {
     text-decoration-line: underline;
 
 }
- #errors2{
-     font-family: "Yu Gothic UI Light";
-     font-size: 25px;
-     text-align: center;
-     color: grey;
-     text-decoration-line: underline;
 
- }
- /*COMMENT SYSTEM**********************************************************************************************************/
- * {
-     box-sizing: border-box;
-     font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
-     font-size: 16px;
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
- }
- body {
-     background-color: #FFFFFF;
-     margin: 0;
- }
- .navtop {
-     background-color: #3f69a8;
-     height: 60px;
-     width: 100%;
-     border: 0;
- }
- .navtop div {
-     display: flex;
-     margin: 0 auto;
-     width: 1000px;
-     height: 100%;
- }
- .navtop div h1, .navtop div a {
-     display: inline-flex;
-     align-items: center;
- }
- .navtop div h1 {
-     flex: 1;
-     font-size: 24px;
-     padding: 0;
-     margin: 0;
-     color: #ecf0f6;
-     font-weight: normal;
- }
- .navtop div a {
-     padding: 0 20px;
-     text-decoration: none;
-     color: #c5d2e5;
-     font-weight: bold;
- }
- .navtop div a i {
-     padding: 2px 8px 0 0;
- }
- .navtop div a:hover {
-     color: #ecf0f6;
- }
- .content {
-    display: flex;
-     justify-content: left;
-     margin: 0 auto;
- }
- .content h2 {
-     margin: 0;
-     padding: 25px 0;
-     font-size: 22px;
-     border-bottom: 1px solid #ebebeb;
-     color: #666666;
- }
+#errors2 {
+    font-family: "Yu Gothic UI Light";
+    font-size: 25px;
+    text-align: center;
+    color: grey;
+    text-decoration-line: underline;
 
-
-
- /**/
- .comments .comment_header {
-     display: flex;
-     justify-content: space-between;
-     border-bottom: 1px solid #eee;
-     padding: 15px 0;
-     margin-bottom: 10px;
-     align-items: center;
- }
- .comments .comment_header .total {
-     color: #777777;
-     font-size: 20px;
- }
- .comments .comment_header .write_comment_btn {
-     margin: 0;
-     background-color: #ffe1e3;
- }
- .comments .write_comment_btn, .comments .write_comment button {
-     display: inline-block;
-     background-color: #565656;
-     color: #fff;
-     text-decoration: none;
-     margin: 10px 0 0 0;
-     padding: 5px 10px;
-     border-radius: 5px;
-     font-size: 14px;
-     font-weight: 600;
-     border: 0;
- }
- .comments .write_comment_btn:hover, .comments .write_comment button:hover {
-     background-color: #ffccc2;
- }
- .comments .write_comment {
-     display: none;
-     padding: 20px 0 10px 0;
- }
- .comments .write_comment textarea {
-     width: 100%;
-     padding: 10px;
-     border: 1px solid #ddd;
-     border-radius: 5px;
-     height: 150px;
-     margin-top: 10px;
- }
- .comments .write_comment input {
-     display: block;
-     width: 250px;
-     padding: 10px;
-     border: 1px solid #ddd;
-     border-radius: 5px;
-     margin-top: 10px;
- }
- .comments .write_comment button {
-     cursor: pointer;
- }
- .comments .comment {
-     padding-top: 10px;
- }
- .comments .comment .name {
-     font-family: "Arial Black";
-     display: inline;
-     padding: 0 5px 3px 0;
-     margin: 0;
-     font-size: 16px;
-     color: #555555;
-
- }
-.write_comment col-lg-8 col-md-10 mx-auto{
-     background-color: #ffe1e3;
 }
 
- .comments .comment .date {
-     color: #888888;
-     font-size: 14px;
- }
- .comments .comment .content {
-    margin-left: 0px;
-  /*  text-align: left;*/
-     display: flex;
-     justify-content: left;
+/*COMMENT SYSTEM**********************************************************************************************************/
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
- }
- .comments .comment .reply_comment_btn {
-     display: inline-block;
-     text-decoration: none;
-     margin-bottom: 10px;
-     font-size: 14px;
-     color: white;
-     border: solid grey 1px;
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+}
+
+.navtop {
+    background-color: #3f69a8;
+    height: 60px;
+    width: 100%;
+    border: 0;
+}
+
+.navtop div {
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}
+
+.navtop div h1, .navtop div a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navtop div h1 {
+    flex: 1;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    color: #ecf0f6;
+    font-weight: normal;
+}
+
+.navtop div a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #c5d2e5;
+    font-weight: bold;
+}
+
+.navtop div a i {
+    padding: 2px 8px 0 0;
+}
+
+.navtop div a:hover {
+    color: #ecf0f6;
+}
+
+.content {
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #ebebeb;
+    color: #666666;
+}
+
+
+/**/
+.comments .comment_header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.comments .comment_header .total {
+    color: #777777;
+    font-size: 20px;
+}
+
+.comments .comment_header .write_comment_btn {
+    margin: 0;
     background-color: #ffe1e3;
-     border-radius: 4px;
-     padding: 5px;
-     padding-top: 2px;
-     padding-bottom: 2px;
+}
 
- }
- .comments .comment .replies {
-     padding-left: 30px;
+.comments .write_comment_btn, .comments .write_comment button {
+    display: inline-block;
+    background-color: #565656;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0 0 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+}
 
- }
+.comments .write_comment_btn:hover, .comments .write_comment button:hover {
+    background-color: #ffccc2;
+}
 
- .write_comment_btn{
-     font-family: "Lora";
- }
- #submitBtn{
-     background-color: #ffe1e3;
- }
- #nameBtn{
-     background-color: #ffe1e3;
- }
+.comments .write_comment {
+    display: none;
+    padding: 20px 0 10px 0;
+}
 
- /*COMMENT DANI****************************************************************************************************************/
- textarea{
-     width: 860px;
-     height: 140px;
-     padding: 20px;
-     background-color: white;
+.comments .write_comment textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.comments .write_comment input {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comments .write_comment button {
+    cursor: pointer;
+}
+
+.comments .comment {
+    padding-top: 10px;
+}
+
+.comments .comment .name {
+    font-family: "Arial Black";
+    display: inline;
+    padding: 0 5px 3px 0;
+    margin: 0;
+    font-size: 16px;
+    color: #555555;
+
+}
+
+.write_comment col-lg-8 col-md-10 mx-auto {
+    background-color: #ffe1e3;
+}
+
+.comments .comment .date {
+    color: #888888;
+    font-size: 14px;
+}
+
+.comments .comment .content {
+    margin-left: 0px;
+    /*  text-align: left;*/
+    display: flex;
+    justify-content: left;
+
+}
+
+.comments .comment .reply_comment_btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+    border: solid grey 1px;
+    background-color: #ffe1e3;
+    border-radius: 4px;
+    padding: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+
+.comments .comment .replies {
+    padding-left: 30px;
+
+}
+
+.write_comment_btn {
+    font-family: "Lora";
+}
+
+#submitBtn {
+    background-color: #ffe1e3;
+}
+
+#nameBtn {
+    background-color: #ffe1e3;
+}
+
+/*COMMENT DANI****************************************************************************************************************/
+textarea {
+    width: 860px;
+    height: 140px;
+    padding: 20px;
+    background-color: white;
     margin-right: auto;
-     margin-left: auto;
-     border: 1px solid #ddd;
-     border-radius: 4px;
-     margin-top: 10px;
-/*nacentrovat a responzivne spravit comment*/
- }
- #submitBtn1{
-     background-color: #ffe1e3;
-     border-radius: 4px;
-     border: none;
-     color: white;
-     font-family: "Segoe UI";
-     font-weight: bolder;
-     padding: 5px;
-     padding-top: 2px;
-     padding-bottom: 2px;
-     cursor: pointer;
- }
- .comment-box{
-     width: 900px;
-     padding: 17px;
-     margin-bottom: 4px;
-     background-color: #ffe1e3;
-     border-radius:4px ;
-     margin-left: auto;
-     margin-right: auto;
-     position: relative;
- }
- .comment-box p{
-  font-family: "Lora";
-     font-size: 16px;
+    margin-left: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    /*nacentrovat a responzivne spravit comment*/
+}
 
- }
- .edit-form{
-   position: absolute;
-     top: 5px;
-     right: 3px;
- }
- .edit-form button{
+#submitBtn1 {
+    background-color: #ffe1e3;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-family: "Segoe UI";
+    font-weight: bolder;
+    padding: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.comment-box {
+    width: 900px;
+    padding: 17px;
+    margin-bottom: 4px;
+    background-color: #ffe1e3;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.comment-box p {
+    font-family: "Lora";
+    font-size: 16px;
+
+}
+
+.edit-form {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+}
+
+.edit-form button {
     width: 50px;
-     height: 30px;
-     border-radius: 4px;
-     font-family: "Segoe UI";
-     background-color: white;
-     opacity: 0.7;
+    height: 30px;
+    border-radius: 4px;
+    font-family: "Segoe UI";
+    background-color: white;
+    opacity: 0.7;
 
- }
- .edit-form button:hover{
-     opacity: 1;
- }
+}
 
- .delete-form{
-     position: absolute;
-     top: 5px;
-     right: 55px;
- }
- .delete-form button{
-     width: 60px;
-     height: 30px;
-     border-radius: 4px;
-     font-family: "Segoe UI";
-     background-color: white;
-     opacity: 0.7;
+.edit-form button:hover {
+    opacity: 1;
+}
 
- }
- .delete-form button:hover{
-     opacity: 1;
- }
- #information{
-     font-family: "Segoe UI";
-     font-style: italic;
-     text-align: center;
- }
+.delete-form {
+    position: absolute;
+    top: 5px;
+    right: 55px;
+}
+
+.delete-form button {
+    width: 60px;
+    height: 30px;
+    border-radius: 4px;
+    font-family: "Segoe UI";
+    background-color: white;
+    opacity: 0.7;
+
+}
+
+.delete-form button:hover {
+    opacity: 1;
+}
+
+#information {
+    font-family: "Segoe UI";
+    font-style: italic;
+    text-align: center;
+}
+
 
