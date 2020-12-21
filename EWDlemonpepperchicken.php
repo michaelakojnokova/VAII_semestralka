@@ -21,7 +21,7 @@ $conn = mysqli_connect('localhost','root','','vaii_database');
           type="text/css">-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
-   <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -151,19 +151,16 @@ $conn = mysqli_connect('localhost','root','','vaii_database');
 
 </nav>
 <!--
-
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="Signup.php">Sign up</a>
         </li>
     </ul>
-
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="Login.php">Log in</a>
         </li>
     </ul>
-
 -->
 
 <!-- Post -->
@@ -239,21 +236,20 @@ $conn = mysqli_connect('localhost','root','','vaii_database');
 
 <hr>
 <?php
-    if(isset($_SESSION['useruid'])) { //musim bzt prihlasena ak chcem komentovat, inak vypise hlasku
-        echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
+if(isset($_SESSION['useruid'])) { //musim bzt prihlasena ak chcem komentovat, inak vypise hlasku
+    echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
 <form method='post' action='".setComments($conn)."'>
-    <input type='hidden' name='uid' value='Anonymous'>
+    <input type='hidden' name='uid' value='".$_SESSION['useruid']."'>
     <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
     <textarea style='resize: none' name='message' placeholder='Write your comment here...'> </textarea><br>
     <button id='submitBtn1' name='commentSubmit' type='submit'>Submit comment</button>
     <br><br>
-
 </form>
 </div>";
-    }
-    else{
-        echo "<div id = information  > You need to be logged in to comment !  </div> <br><br>";
-    }
+}
+else{
+    echo "<div id = information  > You need to be logged in to comment !  </div> <br><br>";
+}
 
 getComments($conn);
 ?>
