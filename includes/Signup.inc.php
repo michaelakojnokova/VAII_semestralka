@@ -5,7 +5,7 @@ $dBUsername = "root";
 $dBPassword    = "";
 $dBName = "vaii_database";
 $conn = mysqli_connect($serverName,$dBUsername,$dBPassword ,$dBName);
-//nechceme aby sa pouzivatel vedel dostat cez url do includes
+
 if (isset($_POST["submit1"])) {
     $email = $_POST["email"];
     $username = $_POST["uid"];
@@ -14,31 +14,31 @@ if (isset($_POST["submit1"])) {
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
-
-    if (emptyInputSignup( $email,$username, $password, $passwordRepeat) !== false) { //ak je prazdny , tak error
-        header("location: ../Signup.php?error=emptyInput"); //toto sa ukaze v url ak niekto zabudol dat nieco do form
+//ak nie je prazdne
+    if (emptyInputSignup( $email,$username, $password, $passwordRepeat) !== false) {
+        header("location: ../Signup.php?error=emptyInput");
         exit();
     }
 
-    if (invalidUid($username) !== false) { //ak nie je validne username, tak error
+    if (invalidUid($username) !== false) {
         header("location: ../Signup.php?error=invalidUid");
         exit();
     }
 
-    if (invalidEmail($email) !== false) { //ak nie je validny mail , tak error
+    if (invalidEmail($email) !== false) {
         header("location: ../Signup.php?error=invalidEmail");
         exit();
     }
 
 
-    if (pwdMatch($password, $passwordRepeat) !== false) { //ak nie su hesla match , tak error
-        header("location: ../Signup.php?error=passwordsDontMatch"); //toto sa ukaze v url
+    if (pwdMatch($password, $passwordRepeat) !== false) {
+        header("location: ../Signup.php?error=passwordsDontMatch");
         exit();
     }
 
 
-    if (uidExists($conn, $username , $email) !== false) { //ak username is taken , tak error
-        header("location: ../Signup.php?error=usernameTaken"); //toto sa ukaze v url
+    if (uidExists($conn, $username , $email) !== false) {
+        header("location: ../Signup.php?error=usernameTaken");
         exit();
     }
 

@@ -22,13 +22,13 @@ function getComments($conn)
         echo "<div class='comment-box'><p>";
         echo $row['uid'] . "<br>";
         echo $row['date'] . "<br>";
-        echo nl2br($row['message']); //breaks line
+        echo nl2br($row['message']);
         echo "</p>
 <form class='delete-form' method='post' action='".deleteComments($conn)."'>  
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
             <button type='submit' name='commentDelete'>Delete</button>
 </form>
-            <form class='edit-form' method='post' action='editcomment.php'>  <!--zobrali sme co mame napisane v komente aby to bolo predvyplnene ked to budem chciet editnut-->
+            <form class='edit-form' method='post' action='editcomment.php'>  
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
               <input type='hidden' name='uid' value='" . $row['uid'] . "'>
                <input type='hidden' name='date' value='" . $row['date'] . "'>
