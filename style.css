@@ -661,7 +661,7 @@ hr {
 
 /* Set a style for the submit/register button */
 
-.registerbtn {
+.register  {
     background-color: #f7f7f7;
     color: black;
     padding: 16px 20px;

@@ -202,7 +202,7 @@ session_start();
 
 
                     <div class="col-md-9 mb-md-0 mb-5">
-                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                        <form id="contact-form" class="contact-form" action="contactform.php" method="POST">
 
 
                             <div class="row">
@@ -210,7 +210,7 @@ session_start();
                                 <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="name" name="name" class="form-control">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Full name" >
                                         <label for="name" class="">Your name</label>
                                     </div>
                                 </div>
@@ -218,8 +218,8 @@ session_start();
 
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="email" name="email" class="form-control">
-                                        <label for="email" class="">Your email</label>
+                                        <input type="text" id="email" name="mail" class="form-control" placeholder="Email" >
+                                        <label for="mail" class="">Your email</label>
                                     </div>
                                 </div>
 
@@ -229,7 +229,7 @@ session_start();
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="subject" name="subject" class="form-control">
+                                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" >
                                         <label for="subject" class="">Subject</label>
                                     </div>
                                 </div>
@@ -242,20 +242,21 @@ session_start();
                                 <div class="col-md-12">
 
                                     <div class="md-form">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Message" ></textarea>
                                         <label for="message">Your message</label>
                                     </div>
 
                                 </div>
                             </div>
+                            <div class="text-center text-md-left">
+                                <button type="submit" class="btn btn-secondary" name="submit" ">Send message</button>
+                            </div>
+                            <div class="status"></div>
 
 
                         </form>
 
-                        <div class="text-center text-md-left">
-                            <a class="btn btn-secondary" onclick="document.getElementById('contact-form').submit();">Send message</a>
-                        </div>
-                        <div class="status"></div>
+
                     </div>
 
                     <div class="col-md-3 text-center">
