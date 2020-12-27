@@ -23,7 +23,8 @@ function getComments($conn)
         $sql2 = "SELECT * FROM users WHERE usersId = '$id'";
         $result2 = $conn->query($sql2);
         if ($row2 = $result2->fetch_assoc()) {
-            echo "<div class='comment-box'><p>";
+            echo "<div class='comment-box '>
+<div class='col-sm-'></div> <p>";
             echo $row2['usersUid'] . "<br>";//user table
             echo $row['date'] . "<br>";
             echo nl2br($row['message']);
@@ -44,7 +45,7 @@ function getComments($conn)
                 }
             }
 
-            echo "</div> <br>";
+            echo "</div></div> <br>";
         }
 
 

@@ -44,7 +44,7 @@ $uid = $_POST['uid'];
 $date = $_POST['date'];
 $message = $_POST['message'];
 
-echo "<div class='comment col-lg-8 col-md-10 mx-auto'>
+echo "<div class='comment col-lg-8 col-md-10 mx-auto d-flex justify-content-center'>
 <form method='post' action='".editComments($conn)."'>
  <input type='hidden' name='cid' value='".$cid."'>
     <input type='hidden' name='uid' value='".$uid."'>
