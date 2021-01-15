@@ -3,6 +3,7 @@ session_start();
 require_once 'header.php';
 ?>
 <!-- Post -->
+
 <article>
     <div class="container">
         <div class="col-sm-16">
