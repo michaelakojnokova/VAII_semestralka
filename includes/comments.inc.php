@@ -43,6 +43,12 @@ function getComments($conn)
             <button>Edit</button>
             </form>";
                 }
+                if ($_SESSION["useruid"] == "admin") {
+                    echo " <form class='delete-form' method='post' action='" . deleteComments($conn) . "'>  
+             <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
+            <button type='submit' name='commentDelete'>Delete</button>
+            </form>";
+                }
             }
 
             echo "</div></div> <br>";
