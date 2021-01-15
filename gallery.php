@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'header.php'; //davam do kazdeho noveho suboru
-require_once 'galleryAction.inc.php';
+require_once 'includes/galleryAction.inc.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,7 +60,7 @@ require_once 'galleryAction.inc.php';
         {
             var action = "fetch";
             $.ajax({
-                url:"galleryAction.inc.php",
+                url:"includes/galleryAction.inc.php",
                 method:"POST",
                 data:{action:action},
                 success:function(data)
@@ -97,7 +97,7 @@ require_once 'galleryAction.inc.php';
                 else
                 {
                     $.ajax({
-                        url:"galleryAction.inc.php",
+                        url:"includes/galleryAction.inc.php",
                         method:"POST",
                         data:new FormData(this),
                         contentType:false,
@@ -126,7 +126,7 @@ require_once 'galleryAction.inc.php';
             if(confirm("Are you sure you want to remove this image from database?"))
             {
                 $.ajax({
-                    url:"galleryAction.inc.php",
+                    url:"includes/galleryAction.inc.php",
                     method:"POST",
                     data:{image_id:image_id, action:action},
                     success:function(data)
