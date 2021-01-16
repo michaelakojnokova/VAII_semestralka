@@ -4,7 +4,7 @@ date_default_timezone_set('Europe/Bratislava');
 require_once 'includes/dbh.inc.comments.php';
 require_once 'includes/comments.inc.php';
 $conn = mysqli_connect('localhost','root','','vaii_database');
-require_once 'header.php';
+require_once 'header1.php';
 ?>
 
 

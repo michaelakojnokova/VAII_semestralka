@@ -114,6 +114,11 @@
             <a class="nav-link" href="gallery.php">Gallery</a>
         </li>
     </ul>';
+                echo '    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="Users.php">Users</a>
+        </li>
+    </ul>';
             }
             echo '    <ul class="navbar-nav">
         <li class="nav-item">

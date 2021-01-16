@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'header.php'; //davam do kazdeho noveho suboru
+require_once 'header1.php'; //davam do kazdeho noveho suboru
 require_once 'includes/galleryAction.inc.php';
 ?>
 <!DOCTYPE html>
