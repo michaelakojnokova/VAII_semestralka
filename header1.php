@@ -105,7 +105,7 @@
         if (isset($_SESSION["useruid"])){ //existuje to ? ak ano,user je logged in
             echo '<ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="Profile.php">Profile</a>
+            <a class="nav-link" href="Profile.php?action=view"> Profile</a>
         </li>
     </ul> ';
             if($_SESSION["useruid"] == "admin"){
