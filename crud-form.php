@@ -106,16 +106,18 @@ require_once('crud-script.php');
 
     </div>
 
-    <table border="1">
+    <table class="table">
+        <thead>
         <tr>
 <br><br>
-            <th>User email</th>
-            <th>Username</th>
-            <th>First Name</th>
-            <th>Last name</th>
-            <th>Age</th>
-            <th>Delete</th>
+            <th scope="col">User email</th>
+            <th scope="col">Username</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Delete</th>
         </tr>
+        </thead>
 
         <?php
 
@@ -130,6 +132,7 @@ require_once('crud-script.php');
             $usersId = 1;
             foreach ($fetchData as $data) {
                 ?>
+        <tbody>
                 <tr>
 
                     <td><?php echo $data['usersEmail']; ?></td>
