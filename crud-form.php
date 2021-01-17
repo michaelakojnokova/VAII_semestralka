@@ -98,16 +98,17 @@ require_once('crud-script.php');
     </style>-->
 </head>
 <body>
-
+<?php  session_start(); require_once 'header1.php';   ?>
 <!--====form section start====-->
 <div class="table-data">
     <div class="list-title">
-        <h2>List of users</h2>
+
 
     </div>
+
     <table border="1">
         <tr>
-
+<br><br>
             <th>User email</th>
             <th>Username</th>
             <th>First Name</th>
@@ -117,8 +118,8 @@ require_once('crud-script.php');
         </tr>
 
         <?php
-        session_start();
-        require_once 'header1.php';
+
+
         $hostname     = "localhost";
         $username     = "root";
         $password     = "";
