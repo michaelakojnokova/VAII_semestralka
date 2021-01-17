@@ -3,8 +3,7 @@
 function Get_user_profile_data($useruid, $connection)
 {
 $query = "
-SELECT * FROM users
-WHERE usersUid = '".$useruid."'
+SELECT * FROM users WHERE usersUid = '".$useruid."'
 ";
 return $connection->query($query);
 }
@@ -14,8 +13,8 @@ function Get_user_profile_data_html($useruid, $connection)
 $result = Get_user_profile_data($useruid, $connection);
 
 $output = '
-<div class="table-responsive">
-    <table class="table">
+<div class=" justify-content-center">
+    <table class=" table table-bordered ">
         ';
 
         foreach($result as $row)
