@@ -13,8 +13,8 @@ function Get_user_profile_data_html($useruid, $connection)
 $result = Get_user_profile_data($useruid, $connection);
 
 $output = '
-<div class=" justify-content-center">
-    <table class=" table table-bordered ">
+<div class=" table table-responsive">
+    <table  class="center">
         ';
 
         foreach($result as $row)
