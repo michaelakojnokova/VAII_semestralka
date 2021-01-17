@@ -116,7 +116,7 @@
     </ul>';
                 echo '    <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="userlist.php">Users</a>
+            <a class="nav-link" href="crud-form.php">Users</a>
         </li>
     </ul>';
             }
