@@ -4,9 +4,9 @@ $username     = "root";
 $password     = "";
 $databasename = "vaii_database";
 
-$conn = mysqli_connect($hostname, $username, $password,$databasename);
+$connection = mysqli_connect($hostname, $username, $password,$databasename);
 
-if (!$conn) {
+if (!$connection) {
     die("Unable to Connect database: " . mysqli_connect_error());
 }
 ?>
