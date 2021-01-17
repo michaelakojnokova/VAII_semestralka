@@ -106,7 +106,7 @@ require_once('crud-script.php');
 
     </div>
 
-    <table class="table">
+    <table class="table table-hover">
         <thead>
         <tr>
 <br><br>
@@ -115,7 +115,7 @@ require_once('crud-script.php');
             <th scope="col">First Name</th>
             <th scope="col">Last name</th>
             <th scope="col">Age</th>
-            <th scope="col">Delete</th>
+            <th scope="col"></th>
         </tr>
         </thead>
 
@@ -143,6 +143,7 @@ require_once('crud-script.php');
 
                     <td><a href="crud-form.php?delete=<?php echo $data['usersId']; ?>">Delete</a></td>
                 </tr>
+        </tbody>
                 <?php
                 $usersId++;
             }
@@ -156,6 +157,5 @@ require_once('crud-script.php');
         ?>
 
     </table>
-</div>
 </body>
 </html>
