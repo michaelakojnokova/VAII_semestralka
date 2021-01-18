@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,25 +9,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium"
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
           type="text/css"/>
-    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
     <img src="images/logo.png" height="205" width="490" alt="logo"/>
-    <!--   <h1>Wild & Gorgeous</h1>
-       <p>Your daily dose of lifestyle!</p> -->
+
 </div>
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="Home.php">HOME</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -39,12 +38,12 @@
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     EAT WELL
                 </a>
-                <div class="dropdown-menu" >
+                <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Eat well</a>
-                    <a class="dropdown-item" href="EatWellRecipes.php">Recipes</a>
+                    <a class="dropdown-item" href="CategoryRecipes.php">Recipes</a>
                     <a class="dropdown-item" href="#">Breakfast</a>
                     <a class="dropdown-item" href="#">Lunch</a>
-                    <a class="dropdown-item" href="EatWellDinners.php">Dinner</a>
+                    <a class="dropdown-item" href="CategoryDinners.php">Dinner</a>
                     <a class="dropdown-item" href="#">Appetizers</a>
                     <a class="dropdown-item" href="#">Meat</a>
                     <a class="dropdown-item" href="#">Vegan</a>
@@ -101,22 +100,22 @@
             </li>
         </ul>
 
-        <?php //toto dám do každého menu ktoré mám
-        if (isset($_SESSION["useruid"])){ //existuje to ? ak ano,user je logged in
+        <?php
+        if (isset($_SESSION["useruid"])) {
             echo '<ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="Profile.php?action=view"> Profile</a>
+            <a class="nav-link" href="Profile.php?action=view">Profile</a>
         </li>
     </ul> ';
-            if($_SESSION["useruid"] == "admin"){
+            if ($_SESSION["useruid"] == "admin") {
                 echo '    <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="gallery.php">Gallery</a>
+            <a class="nav-link" href="Images.php">Images</a>
         </li>
     </ul>';
                 echo '    <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="crud-form.php">Users</a>
+            <a class="nav-link" href="Users.php">Users</a>
         </li>
     </ul>';
             }
@@ -127,10 +126,7 @@
     </ul>';
 
 
-        }
-
-
-        else{
+        } else {
             echo '<ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link" href="Signup.php">Sign up</a>

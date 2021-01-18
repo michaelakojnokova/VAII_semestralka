@@ -1,18 +1,10 @@
 <?php
 session_start();
-require_once 'header1.php';
-require_once 'function.php';
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$databasename = "vaii_database";
+require_once 'Header.php';
+require_once 'includes/Profile.inc.php';
+require_once 'includes/Database.inc.php';
 
-$connection = mysqli_connect($hostname, $username, $password, $databasename);
-
-if (!$connection) {
-    die("Unable to Connect database: " . mysqli_connect_error());
-}
-
+$connection = mysqli_connect('localhost', 'root', '', 'vaii_database');
 
 ?>
 
@@ -30,9 +22,8 @@ if (!$connection) {
     </div>
     <div class="panel=body">
         <?php
-//zobraz data na zaklade username
-        echo Get_user_profile_data_html($_SESSION["useruid"], $connection);
-
+        //zobraz data na zaklade username
+        echo getUserProfileDataHTML($_SESSION["useruid"], $connection);
         ?>
     </div>
 </div>
@@ -41,12 +32,13 @@ if (!$connection) {
 <?php
 //ak stlacim edit , zobrazi sa mi formular na upravu a url sa nastavi na edit
 
-if($_GET["action"] == 'edit')
+if ($_GET["action"] == 'edit')
 {
-$result = Get_user_profile_data($_SESSION["useruid"], $connection);
+$result = getUserProfileData($_SESSION["useruid"], $connection);
 
-foreach($result as $row) {
+foreach ($result
 
+as $row) {
 
 ?>
 
@@ -57,17 +49,18 @@ foreach($result as $row) {
                 <h3 class="panel-title">Edit Profile</h3>
             </div>
             <div class="col-md-3" align="right">
-                <a href="profile.php?action=view" class="btn btn-primary btn-xs">View</a>
+                <a href="Profile.php?action=view" class="btn btn-primary btn-xs">View</a>
             </div>
         </div>
     </div>
-    <div class="panel-body" >
+    <div class="panel-body">
         <form method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <div class="row">
-                    <label style="padding-left:20px" class="col-md-1" >First name</label>
+                    <label style="padding-left:20px" class="col-md-1">First name</label>
                     <div class="col-sm-5">
-                        <input type="name" name="firstName" id="firstName" class="form-control" value="<?php echo $row["firstName"];  ?>" />
+                        <input type="name" name="firstName" id="firstName" class="form-control"
+                               value="<?php echo $row["firstName"]; ?>"/>
                     </div>
                 </div>
             </div>
@@ -75,7 +68,8 @@ foreach($result as $row) {
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Last name</label>
                     <div class="col-sm-5">
-                        <input  type="name" name="lastName" id="lastName" class="form-control" value="<?php echo $row["lastName"];  ?>" />
+                        <input type="name" name="lastName" id="lastName" class="form-control"
+                               value="<?php echo $row["lastName"]; ?>"/>
                     </div>
                 </div>
             </div>
@@ -84,7 +78,8 @@ foreach($result as $row) {
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Email</label>
                     <div class="col-sm-5">
-                        <input type="email" name="usersEmail" id="usersEmail" class="form-control" value="<?php echo $row["usersEmail"]; ?>" />
+                        <input type="email" name="usersEmail" id="usersEmail" class="form-control"
+                               value="<?php echo $row["usersEmail"]; ?>"/>
                     </div>
                 </div>
             </div>
@@ -92,7 +87,8 @@ foreach($result as $row) {
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Username</label>
                     <div class="col-sm-5">
-                        <input type="name" name="usersUid" id="usersUid" class="form-control" value="<?php echo $row["usersUid"]; ?>" />
+                        <input type="name" name="usersUid" id="usersUid" class="form-control"
+                               value="<?php echo $row["usersUid"]; ?>"/>
                     </div>
                 </div>
             </div>
@@ -100,7 +96,8 @@ foreach($result as $row) {
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Age</label>
                     <div class="col-sm-5">
-                        <input type="number" name="age" id="age" class="form-control" value="<?php echo $row["age"]; ?>" />
+                        <input type="number" name="age" id="age" class="form-control"
+                               value="<?php echo $row["age"]; ?>"/>
                     </div>
                 </div>
             </div>
@@ -108,14 +105,13 @@ foreach($result as $row) {
     </div>
     <?php
 
-    if($_GET["action"] == 'edit')
-    {
+    if ($_GET["action"] == 'edit') {
         $data = array(
-            ':firstName'    => $_POST["firstName"],
-            ':lastName'  => $_POST["lastName"],
-            ':usersEmail'   => $_POST["usersEmail"],
-            ':usersUid'   => $_POST["usersUid"],
-            'age'    => $_POST["age"]
+            ':firstName' => $_POST["firstName"],
+            ':lastName' => $_POST["lastName"],
+            ':usersEmail' => $_POST["usersEmail"],
+            ':usersUid' => $_POST["usersUid"],
+            'age' => $_POST["age"]
         );
         $query = "
    UPDATE users
@@ -131,7 +127,7 @@ foreach($result as $row) {
 
         $statement->execute($data);
 
-        header("location:profile.php?action=view&success=1");
+        header("location:Profile.php?action=view&success=1");
 
     }
     }

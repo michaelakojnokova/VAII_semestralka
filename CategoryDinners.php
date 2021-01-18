@@ -1,8 +1,7 @@
 <?php
 session_start();
-require_once 'header1.php';
+require_once 'Header.php';
 ?>
-
 
 
 <h2 id="EWDh2Dinners">Delicious Dinners</h2>
@@ -12,8 +11,8 @@ require_once 'header1.php';
     <div id="container7">
         <img id="lemonpepperchicken" src="images/EWDlemonpepperchicken.jpg" height="370" width="370" style="float: left"
              class="img-fluid" alt="16"/>
-        <h5 id="h5lemonpepperchicken"><a class="link-my-color" href="EWDlemonpepperchicken.php">LEMON PEPPER
-            CHICKEN</a></h5>
+        <h5 id="h5lemonpepperchicken"><a class="link-my-color" href="CommentPageReceipt1.php">LEMON PEPPER
+                CHICKEN</a></h5>
         <p id="pLemonpepperchicken">There’s something divine about lemon and pepper together. The zesty flavours are
             awesome
             on both seafood and chicken. Here I’ve added a bit of extra spice and paired it with a low-carb rice option
@@ -26,7 +25,7 @@ require_once 'header1.php';
     <div id="container8">
         <img id="spicymexican" src="images/EWDspicymexican.jpg" height="370" width="370" style="float: left"
              class="img-fluid" alt="17"/>
-        <h5 id="h5spicymexican"><a class="link-my-color " href="gallery.php">SPICY MEXICAN BOWL</a></h5>
+        <h5 id="h5spicymexican"><a class="link-my-color " href="Images.php">SPICY MEXICAN BOWL</a></h5>
         <p id="pspicymexican">This delicious and simple bowl can be whipped up in 10 minutes or less. Such a simple,
             nourishing dish, with all the robust flavours of Mexicana. Save yourself a heap of time an effort by using
             up

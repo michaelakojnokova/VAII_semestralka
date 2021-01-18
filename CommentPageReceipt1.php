@@ -1,10 +1,10 @@
 <?php
 session_start();
 date_default_timezone_set('Europe/Bratislava');
-require_once 'includes/dbh.inc.comments.php';
-require_once 'includes/comments.inc.php';
+require_once 'includes/Database.inc.php';
+require_once 'includes/Comments.inc.php';
 $conn = mysqli_connect('localhost','root','','vaii_database');
-require_once 'header1.php';
+require_once 'Header.php';
 ?>
 
 

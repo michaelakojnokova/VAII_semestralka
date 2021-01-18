@@ -1,14 +1,12 @@
 <?php
+require_once 'Database.inc.php';
+
 $email = $_POST["email"];
 $username = $_POST["uid"];
 $password = $_POST["psw"];
 $passwordRepeat = $_POST["psw-repeat"];
 
-$serverName = "localhost";
-$dBUsername = "root";
-$dBPassword = "";
-$dBName = "vaii_database";
-$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
+
 function emptyInputSignup($email, $username, $password, $passwordRepeat)
 {
     $result = "";
@@ -83,7 +81,7 @@ function createUser($conn, $email, $username, $password)
     $sql = "INSERT INTO users (usersEmail,usersUid, usersPwd) VALUES (?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Signup.php?error=stmtFailed"); //toto sa ukaze v url
+        header("location: ../Signup.php?error=stmtFailed");
         exit();
     }
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
@@ -111,14 +109,14 @@ function loginUser($conn, $username, $password)
 {
     $uidExists = uidExists($conn, $username, $username);
 
-    if ($uidExists === false) { //ak sa neregistroval, login nie je ulozeny v databaze cize false
-        header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
+    if ($uidExists === false) {
+        header("location: ../Login.php?error=wrongLogin");
         exit();
     }
     $passwordHashed = $uidExists["usersPwd"];
     $checkPassword = password_verify($password, $passwordHashed);
     if ($checkPassword === false) { //user wrote wrong password
-        header("location: ../Login.php?error=wrongLogin"); //toto sa ukaze v url
+        header("location: ../Login.php?error=wrongLogin");
         exit();
 
     } elseif ($checkPassword === true) {
@@ -126,7 +124,7 @@ function loginUser($conn, $username, $password)
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUid"];
 
-        header("location: ../Home.php"); //toto sa ukaze v url
+        header("location: ../Home.php");
         exit();
     }
 }

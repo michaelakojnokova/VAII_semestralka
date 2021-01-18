@@ -1,9 +1,7 @@
 <?php
 session_start();
-require_once 'header1.php';
+require_once 'Header.php';
 ?>
-
-
 
 <form method="post" action="includes/Login.inc.php">
     <div id="containerRegister" class="container">
@@ -23,10 +21,10 @@ require_once 'header1.php';
         </div>
 
         <label for="username"><b>Username</b></label>
-        <input class="rounded" type="text" placeholder="Enter Username/Email" name="uid" id="username" >
+        <input class="rounded" type="text" placeholder="Enter Username/Email" name="uid" id="username">
 
         <label for="password"><b>Password</b></label>
-        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw"  >
+        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw">
         <hr>
 
         <button name="submit" type="submit" class="registerbtn button5">Log in</button>

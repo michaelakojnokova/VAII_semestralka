@@ -14,6 +14,7 @@ if (isset($_POST['submit'])) {
     mail($mailTo, $subject, $txt, $headers);
 
     header("Location: AboutMe.php?mailsent" );
+
     echo "Email successfully sent  ..";
 
 }

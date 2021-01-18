@@ -35,7 +35,7 @@ function getComments($conn)
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
             <button type='submit' name='commentDelete'>Delete</button>
             </form>
-            <form class='edit-form' method='post' action='editcomment.php'>  
+            <form class='edit-form' method='post' action='CommentsEdit.php'>  
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
               <input type='hidden' name='uid' value='" . $row['uid'] . "'>
                <input type='hidden' name='date' value='" . $row['date'] . "'>
@@ -70,7 +70,7 @@ function editComments($conn)
 
         $sql = "UPDATE comments SET message=' $message' WHERE cid = '$cid' ";
         $result = $conn->query($sql);
-        header("Location: EWDlemonpepperchicken.php");
+        header("Location: CommentPageReceipt1.php");
 
     }
 }
@@ -83,7 +83,7 @@ function deleteComments($conn)
 
         $sql = " DELETE FROM comments WHERE cid='$cid' ";
         $result = $conn->query($sql);
-        header("Location: EWDlemonpepperchicken.php");
+        header("Location: CommentPageReceipt1.php");
 
     }
 }

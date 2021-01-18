@@ -12,7 +12,7 @@
           type="text/css">-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
-    <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="//db.onlinewebfonts.com/c/ed7de7f8213e4a5e40e57f9bbbbd8929?family=Neutraface+2+Display+Medium"
           rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/5c803199923a6ed48112bebbb486b3e0?family=Lora" rel="stylesheet"
@@ -36,7 +36,8 @@
 </div>
 <hr>
 <?php
-require_once 'includes/comments.inc.php';
+require_once 'includes/Comments.inc.php';
+
 $conn = mysqli_connect('localhost','root','','vaii_database');
 $cid = $_POST['cid'];
 $uid = $_POST['uid'];

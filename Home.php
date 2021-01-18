@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'header1.php';
+require_once 'Header.php';
 ?>
 
 
@@ -94,7 +94,7 @@ require_once 'header1.php';
                                 document.getElementById("poll").innerHTML=this.responseText;
                             }
                         }
-                        xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+                        xmlhttp.open("GET","Poll.php?vote="+int,true);
                         xmlhttp.send();
                     }
                 </script>
@@ -108,6 +108,7 @@ require_once 'header1.php';
                     No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
                 </form>
             </div>
+
 
             </body>
             </html>
@@ -125,7 +126,7 @@ require_once 'header1.php';
                      class="img-fluid" alt="10"/>
             </div>
             <h6 id="h6eatwell"> EAT WELL</h6>
-            <h5 id="h5vegan"><a class="link-my-color " href="gallery.php">WHAT TO LOOK FOR IN A VEGAN / PLANT BASED PROTEIN</a></h5>
+            <h5 id="h5vegan"><a class="link-my-color " href="Images.php">WHAT TO LOOK FOR IN A VEGAN / PLANT BASED PROTEIN</a></h5>
             <p id="pProtein">Protein is a vital part of any healthy, balanced diet. It holds particular value if
                 you’re trying to
                 build muscle or get lean because protein takes more energy (aka calories) to break down, comparative to
@@ -135,7 +136,7 @@ require_once 'header1.php';
                 <img id="posture" src="images/posture.jpg" height="280" width="370" style="float: right"
                      class="img-fluid" alt="12"/>
                 <h6 id="h6tips"> TIPS</h6>
-                <h5 id="h5posture"><a class="link-my-color " href="gallery.php">6SIMPLE WAYS TO HAVE BETTER POSTURE AT YOUR DESK</a></h5>
+                <h5 id="h5posture"><a class="link-my-color " href="Images.php">6SIMPLE WAYS TO HAVE BETTER POSTURE AT YOUR DESK</a></h5>
                 <p id="pPosture"> You’re probably currently sitting at your desk reading this, blissfully unaware of
                     your posture
                     right now—and that’s perfectly normal. It can be difficult to always be mindful of your posture,
@@ -147,7 +148,7 @@ require_once 'header1.php';
                 <img id="unproductive.png" src="images/unproductive.png" height="280" width="370" style="float: right"
                      class="img-fluid" alt="13"/>
                 <h6 id="h6tips1"> TIPS</h6>
-                <h5 id="h5unproductive"><a class="link-my-color " href="gallery.php">10THINGS TO DO WHEN YOU'RE FEELING UNPRODUCTIVE</a></h5>
+                <h5 id="h5unproductive"><a class="link-my-color " href="Images.php">10THINGS TO DO WHEN YOU'RE FEELING UNPRODUCTIVE</a></h5>
                 <p id="pUnproductive"> If you’re lacking motivation or energy these days, it’s not just you.
                     Unfortunately, we don’t have an “on” button, and we can’t be plugged into an outlet. That means that
                     no matter how much our employers expect us to be productive from 9-5, our energy levels and
@@ -158,7 +159,7 @@ require_once 'header1.php';
                 <img id="payRise" src="images/payRise.jpg" height="280" width="370" style="float: right"
                      class="img-fluid" alt="14"/>
                 <h6 id="h6finance"> FINANCE</h6>
-                <h5 id="h5payRise"><a class="link-my-color " href="gallery.php">WHAT TO DO IF YOUR REQUEST FOR A PAY RISE GETS TURNED DOWN</a></h5>
+                <h5 id="h5payRise"><a class="link-my-color " href="Images.php">WHAT TO DO IF YOUR REQUEST FOR A PAY RISE GETS TURNED DOWN</a></h5>
                 <p id="pPayRise"> Having the confidence to ask for a pay rise is no easy feat. There’s the daunting task
                     of having to sell yourself to your seniors, the tricky dynamics of knowing your worth, and the
                     unfortunate truth that women are much more likely than their male counterparts to have a raise
@@ -169,7 +170,7 @@ require_once 'header1.php';
                 <img id="toxins" src="images/toxins.jpeg" height="280" width="370" style="float: right"
                      class="img-fluid" alt="15"/>
                 <h6 id="h6greenLiving"> GREEN LIVING</h6>
-                <h5 id="h5toxins"><a class="link-my-color " href="gallery.php">HOMEMADE CLEANING PRODUCTS THAT WILL SAVE YOU MONEY AND TOXINS</a></h5>
+                <h5 id="h5toxins"><a class="link-my-color " href="Images.php">HOMEMADE CLEANING PRODUCTS THAT WILL SAVE YOU MONEY AND TOXINS</a></h5>
                 <p id="pToxins"> 2-Butoxyethanol.Honestly, I’m not sure if I pronounced that right, but hey props to you
                     if you did. And if you did do you know what it is used for? I think the title of this blog post
                     gives it away but it’s cleaning products....</p>

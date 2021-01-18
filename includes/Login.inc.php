@@ -1,24 +1,20 @@
 <?php
-$serverName = "localhost";
-$dBUsername = "root";
-$dBPassword    = "";
-$dBName = "vaii_database";
-$conn = mysqli_connect($serverName,$dBUsername,$dBPassword ,$dBName);
+require_once 'Database.inc.php';
+require_once 'SignupLoginFunctions.inc.php';
+
+$conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
 
 if (isset($_POST["submit"])) {
     $username = $_POST["uid"];
     $password = $_POST["psw"];
 
-    require_once 'dbh.inc.php';
-    require_once 'functions.inc.php';
 
-    if (emptyInputLogin( $username, $password) !== false) { //ak je prazdny , tak error
+    if (emptyInputLogin($username, $password) !== false) {
         header("location: ../Login.php?error=emptyInput");
         exit();
     }
-    loginUser($conn, $username,$password);
-}
-else {
+    loginUser($conn, $username, $password);
+} else {
     header("location: ../Login.php");
     exit();
 }

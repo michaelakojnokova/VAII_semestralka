@@ -3,5 +3,5 @@ session_start();
 session_unset();
 session_destroy();
 
-header("location: ../Home.php"); //toto sa ukaze v url
+header("location: ../Home.php");
 exit();

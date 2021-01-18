@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'header1.php';
+require_once 'Header.php';
 ?>
 
     <!--recepty kategorie-->
@@ -16,7 +16,7 @@ require_once 'header1.php';
             <img src="images/EWlunch.jpg" class="img-responsive" style="width:100%" alt="Image">
         </div>
         <div class="col-sm-3">
-            <p><a class="link-my-color" href="EatWellDinners.php">DINNER</a></p>
+            <p><a class="link-my-color" href="CategoryDinners.php">DINNER</a></p>
             <img src="images/EWdinner.jpg" class="img-responsive" style="width:100%" alt="Image">
         </div>
         <div class="col-sm-3">
