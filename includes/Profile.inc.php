@@ -19,7 +19,7 @@ function getUserProfileDataHTML($useruid, $connection)
         ';
 
     foreach ($result as $row) {
-
+//profile details
         $output .= '
         <tr>
             <th>First name</th>

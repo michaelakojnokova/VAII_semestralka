@@ -83,15 +83,7 @@ as $row) {
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="row">
-                    <label class="col-md-1" style="padding-left:20px">Username</label>
-                    <div class="col-sm-5">
-                        <input type="name" name="usersUid" id="usersUid" class="form-control"
-                               value="<?php echo $row["usersUid"]; ?>"/>
-                    </div>
-                </div>
-            </div>
+
             <div class="form-group">
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Age</label>
@@ -110,7 +102,6 @@ as $row) {
             ':firstName' => $_POST["firstName"],
             ':lastName' => $_POST["lastName"],
             ':usersEmail' => $_POST["usersEmail"],
-            ':usersUid' => $_POST["usersUid"],
             'age' => $_POST["age"]
         );
         $query = "
@@ -118,7 +109,6 @@ as $row) {
    SET firstName = :firstName, 
    lastName = :lastName, 
    usersEmail = :usersEmail, 
-  usersUid = :usersUid, 
    age = :age
    WHERE usersUid = :usersUid
    ";
