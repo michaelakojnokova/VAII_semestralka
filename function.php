@@ -1,26 +1,27 @@
 <?php
-
+//////ziskanie dat
 function Get_user_profile_data($useruid, $connection)
 {
-$query = "
+        $query = "
 SELECT * FROM users WHERE usersUid = '".$useruid."'
 ";
-return $connection->query($query);
+        return $connection->query($query);
 }
 
+/////zobrazenie dat do html
 function Get_user_profile_data_html($useruid, $connection)
 {
-$result = Get_user_profile_data($useruid, $connection);
+        $result = Get_user_profile_data($useruid, $connection);
 
-$output = '
+        $output = '
 <div class=" table table-responsive">
-    <table  class="center">
+    <table id="profileTable" class="center">
         ';
 
         foreach($result as $row)
         {
 
-        $output .= '
+               $output .= '
         <tr>
             <th>First name</th>
             <td>'.$row["firstName"].'</td>
@@ -50,6 +51,6 @@ $output = '
 </div>
 ';
 
-return $output;
+        return $output;
 }
 ?>
