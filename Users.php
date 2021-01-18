@@ -5,7 +5,7 @@ require_once('includes/Users.inc.php');
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>List of users</title>
+    <title>Wild & Gorgeous</title>
 
 </head>
 <body>
