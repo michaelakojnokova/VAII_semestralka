@@ -1,9 +1,37 @@
 <?php
+
+
+if ($_GET["action"] == 'submit') {
+
+    include 'includes/Database.inc.php';
+    session_start();
+
+    $data = array(
+        'firstName' => $_POST["firstName"],
+        'lastName' => $_POST["lastName"],
+        'usersEmail' => $_POST["usersEmail"],
+        'age' => $_POST["age"],
+        'usersUid' => $_SESSION["useruid"]
+    );
+
+    $query = "
+   UPDATE users
+   SET firstName = ?, 
+   lastName = ?, 
+   usersEmail = ?, 
+   age = ?
+   WHERE usersUid = ?
+   ";
+    $conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
+    $statement = $conn->prepare($query);
+    $statement->bind_param('sssis', $data['firstName'], $data['lastName'], $data['usersEmail'], $data['age'], $data['usersUid']);
+    $statement->execute();
+    header("location:../Profile.php?action=view&success=1");
+}
 //////ziskanie dat
 function getUserProfileData($useruid, $connection)
 {
-    $query = "
-SELECT * FROM users WHERE usersUid = '" . $useruid . "'
+    $query = "SELECT * FROM users WHERE usersUid = '" . $useruid . "'
 ";
     return $connection->query($query);
 }
@@ -19,7 +47,7 @@ function getUserProfileDataHTML($useruid, $connection)
         ';
 
     foreach ($result as $row) {
-//profile details
+        //profil detaily
         $output .= '
         <tr>
             <th>First name</th>
@@ -52,5 +80,3 @@ function getUserProfileDataHTML($useruid, $connection)
 
     return $output;
 }
-
-?>

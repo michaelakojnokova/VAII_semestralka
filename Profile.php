@@ -4,8 +4,6 @@ require_once 'Header.php';
 require_once 'includes/Profile.inc.php';
 require_once 'includes/Database.inc.php';
 
-$connection = mysqli_connect('localhost', 'root', '', 'vaii_database');
-
 ?>
 
 <div class="panel panel-default">
@@ -22,8 +20,9 @@ $connection = mysqli_connect('localhost', 'root', '', 'vaii_database');
     </div>
     <div class="panel=body">
         <?php
+        $conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
         //zobraz data na zaklade username
-        echo getUserProfileDataHTML($_SESSION["useruid"], $connection);
+        echo getUserProfileDataHTML($_SESSION["useruid"], $conn);
         ?>
     </div>
 </div>
@@ -32,9 +31,8 @@ $connection = mysqli_connect('localhost', 'root', '', 'vaii_database');
 <?php
 //ak stlacim edit , zobrazi sa mi formular na upravu a url sa nastavi na edit
 
-if ($_GET["action"] == 'edit')
-{
-$result = getUserProfileData($_SESSION["useruid"], $connection);
+if ($_GET["action"] == 'edit') {
+$result = getUserProfileData($_SESSION["useruid"], $conn);
 
 foreach ($result
 
@@ -43,24 +41,13 @@ as $row) {
 ?>
 
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <div class="row">
-            <div class="col-md-9">
-                <h3 class="panel-title">Edit Profile</h3>
-            </div>
-            <div class="col-md-3" align="right">
-                <a href="Profile.php?action=view" class="btn btn-primary btn-xs">View</a>
-            </div>
-        </div>
-    </div>
     <div class="panel-body">
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" action="includes/Profile.inc.php?action=submit" enctype="multipart/form-data">
             <div class="form-group">
                 <div class="row">
                     <label style="padding-left:20px" class="col-md-1">First name</label>
                     <div class="col-sm-5">
-                        <input type="name" name="firstName" id="firstName" class="form-control"
-                               value="<?php echo $row["firstName"]; ?>"/>
+                        <input type="name" name="firstName" id="firstName" class="form-control" value="<?php echo $row["firstName"]; ?>" />
                     </div>
                 </div>
             </div>
@@ -68,8 +55,7 @@ as $row) {
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Last name</label>
                     <div class="col-sm-5">
-                        <input type="name" name="lastName" id="lastName" class="form-control"
-                               value="<?php echo $row["lastName"]; ?>"/>
+                        <input type="name" name="lastName" id="lastName" class="form-control" value="<?php echo $row["lastName"]; ?>" />
                     </div>
                 </div>
             </div>
@@ -78,53 +64,33 @@ as $row) {
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Email</label>
                     <div class="col-sm-5">
-                        <input type="email" name="usersEmail" id="usersEmail" class="form-control"
-                               value="<?php echo $row["usersEmail"]; ?>"/>
+                        <input type="email" name="usersEmail" id="usersEmail" class="form-control" value="<?php echo $row["usersEmail"]; ?>" />
                     </div>
                 </div>
             </div>
-
             <div class="form-group">
                 <div class="row">
                     <label class="col-md-1" style="padding-left:20px">Age</label>
                     <div class="col-sm-5">
-                        <input type="number" name="age" id="age" class="form-control"
-                               value="<?php echo $row["age"]; ?>"/>
+                        <input type="number" name="age" id="age" class="form-control" value="<?php echo $row["age"]; ?>" />
                     </div>
                 </div>
+            </div>
+            <div class="form-group">
+
+                <input type="submit" submit="Submit" value="Submit" >
             </div>
         </form>
     </div>
     <?php
 
-    if ($_GET["action"] == 'edit') {
-        $data = array(
-            ':firstName' => $_POST["firstName"],
-            ':lastName' => $_POST["lastName"],
-            ':usersEmail' => $_POST["usersEmail"],
-            'age' => $_POST["age"]
-        );
-        $query = "
-   UPDATE users
-   SET firstName = :firstName, 
-   lastName = :lastName, 
-   usersEmail = :usersEmail, 
-   age = :age
-   WHERE usersUid = :usersUid
-   ";
 
-        $statement = $connection->prepare($query);
-
-        $statement->execute($data);
-
-        header("location:Profile.php?action=view&success=1");
-
-    }
     }
     }
 
     ?>
     <?php
+
     if (isset($_GET["action"])) {
         if ($_GET["action"] == "view") {
             if (isset($_GET["success"])) {
