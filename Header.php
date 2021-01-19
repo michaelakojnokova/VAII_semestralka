@@ -19,7 +19,7 @@
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-    <img src="images/logo.png" height="205" width="490" alt="logo"/>
+    <img src="images/logo.png" style="max-width: 100%;height: auto;" alt="logo"/>
 
 </div>
 

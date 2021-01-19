@@ -40,49 +40,27 @@ as $row) {
 
 ?>
 
-<div  class="panel panel-default ">
-    <div  class="panel-body  ">
+    <div class="container" style="max-width: 800px;">
         <form method="post" action="includes/Profile.inc.php?action=submit" enctype="multipart/form-data">
             <div class="form-group">
-                <div class="row">
-                    <label style="padding-left:20px" class="col-md-1">First name</label>
-                    <div class="col-sm-5">
-                        <input type="name" name="firstName" id="firstName" class="form-control" value="<?php echo $row["firstName"]; ?>" />
-                    </div>
-                </div>
+                <label for="firstName">First name</label>
+                <input type="name" class="form-control" name="firstName" id="firstName" value="<?php echo $row["firstName"]; ?>">
+            </div>
+            <div class=" form-group">
+                <label for="lastName">Last name</label>
+                <input type="name" class="form-control" name="lastName" id="lastName" value="<?php echo $row["lastName"]; ?>">
             </div>
             <div class="form-group">
-                <div class="row">
-                    <label class="col-md-1" style="padding-left:20px">Last name</label>
-                    <div class="col-sm-5">
-                        <input type="name" name="lastName" id="lastName" class="form-control" value="<?php echo $row["lastName"]; ?>" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <label class="col-md-1" style="padding-left:20px">Email</label>
-                    <div class="col-sm-5">
-                        <input type="email" name="usersEmail" id="usersEmail" class="form-control" value="<?php echo $row["usersEmail"]; ?>" />
-                    </div>
-                </div>
+                <label for="usersEmail">Email address</label>
+                <input type="email" class="form-control" name="usersEmail" id="usersEmail" value="<?php echo $row["usersEmail"]; ?>">
             </div>
             <div class="form-group">
-                <div class="row">
-                    <label class="col-md-1" style="padding-left:20px">Age</label>
-                    <div class="col-sm-5">
-                        <input type="number" name="age" id="age" class="form-control" value="<?php echo $row["age"]; ?>" />
-                    </div>
-                </div>
+                <label for="age">Age</label>
+                <input type="number" class="form-control" name="age" id="age" value=" <?php echo $row["age"]; ?>">
             </div>
-            <div class="form-group">
-
-                <input id="submitbtn" class="btn btn-success" type="submit" submit="Submit" value="Submit" >
-            </div>
+            <input id="submitbtn" class="btn btn-success mx-auto" type="submit" submit="Submit" value="Submit">
         </form>
     </div>
-</div>
     <?php
 
 
