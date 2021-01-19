@@ -10,9 +10,9 @@ require_once 'includes/Database.inc.php';
     <div class="panel-heading">
         <div class="row">
             <div class="col-sm">
-                <h3 style="text-align:left" class="panel-title">Profile Details</h3>
+                <h3 id="profiledetails"  class="panel-title">Profile Details</h3>
             </div>
-            <div class="col-md-3" align="right">
+            <div class="col-md-3" >
                 <a href="Profile.php?action=edit" class="btn btn-success btn-xs">Edit</a>
 
             </div>
@@ -40,9 +40,12 @@ as $row) {
 
 ?>
 
-<div class="panel panel-default">
-    <div class="panel-body">
+<div  class="panel panel-default ">
+    <div  class="panel-body  ">
         <form method="post" action="includes/Profile.inc.php?action=submit" enctype="multipart/form-data">
+            <div class="form-group">
+                <input id="submitbtn" class="btn btn-success" type="submit" submit="Submit" value="Submit" >
+            </div>
             <div class="form-group">
                 <div class="row">
                     <label style="padding-left:20px" class="col-md-1">First name</label>
@@ -76,12 +79,10 @@ as $row) {
                     </div>
                 </div>
             </div>
-            <div class="form-group">
 
-                <input type="submit" submit="Submit" value="Submit" >
-            </div>
         </form>
     </div>
+</div>
     <?php
 
 
@@ -101,7 +102,3 @@ as $row) {
         }
     }
     ?>
-</div>
-<div class="col-md-3">
-</div>
-</div>

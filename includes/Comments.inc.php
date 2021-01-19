@@ -47,11 +47,12 @@ function getComments($conn)
                     echo " <form class='delete-form' method='post' action='" . deleteComments($conn) . "'>  
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
             <button type='submit' name='commentDelete'>Delete</button>
-            </form>";
+            </form>
+            </div>  <br>";
                 }
             }
 
-            echo "</div></div> <br>";
+            echo "";
         }
 
 

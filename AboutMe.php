@@ -63,7 +63,7 @@ require_once 'Header.php';
                                     <div class="md-form mb-0">
                                         <input type="text" id="email" name="mail" class="form-control"
                                                placeholder="Email">
-                                        <label for="mail" class="">Your email</label>
+                                        <label for="email" >Your email</label>
                                     </div>
                                 </div>
 
@@ -87,7 +87,7 @@ require_once 'Header.php';
                                 <div class="col-md-12">
 
                                     <div class="md-form">
-                                        <textarea type="text" id="message" name="message" rows="2"
+                                        <textarea  id="message" name="message" rows="2"
                                                   class="form-control md-textarea" placeholder="Message"></textarea>
                                         <label for="message">Your message</label>
                                     </div>
@@ -96,7 +96,7 @@ require_once 'Header.php';
                             </div>
                             <div class="text-center text-md-left">
                                 <button type="submit" class="btn btn-secondary" name="submit"
-                                ">Send message</button>
+                                >Send message</button>
                             </div>
                             <div class="status"></div>
 

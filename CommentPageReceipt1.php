@@ -71,9 +71,8 @@ require_once 'Header.php';
                 </ol>
                 <br><br>
             </div>
-
-
-
+        </div>
+    </div>
 
 </article>
 
@@ -89,8 +88,7 @@ if(isset($_SESSION['userid'])) { //musim bzt prihlasena ak chcem komentovat, ina
     <textarea style='resize: none' name='message' placeholder='Write your comment here...'> </textarea><br>
     <button id='submitBtn1' name='commentSubmit' type='submit'>Submit comment</button>
     <br><br>
-</form>
-</div>";
+</form> </div>";
 }
 else{
     echo "<div id = information  > You need to be logged in to comment !  </div> <br><br>";

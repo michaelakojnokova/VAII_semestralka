@@ -3,17 +3,13 @@ session_start();
 require_once 'Header.php';
 require_once 'includes/Images.inc.php';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Images used in articles</title>
-</head>
-<body>
+
+
 <br/><br/>
 <div class="container-sm">
-    <h3 style=" font-family: 'Neutraface 2 Display Medium';font-size: 50px" align="center">Images used in articles</h3>
+    <h3 id="imagesH3" >Images used in articles</h3>
     <br/>
-    <div align="right">
+    <div>
         <button type="button" name="add" id="add" class="btn btn-success">Add</button>
     </div>
     <br/>
@@ -21,8 +17,8 @@ require_once 'includes/Images.inc.php';
 
     </div>
 </div>
-</body>
-</html>
+
+
 
 <div id="imageModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -130,5 +126,6 @@ require_once 'includes/Images.inc.php';
         });
     });
 </script>
+</body>
 
 

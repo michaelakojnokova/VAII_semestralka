@@ -1,14 +1,7 @@
 <?php
 require_once('includes/Users.inc.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wild & Gorgeous</title>
 
-</head>
-<body>
 <?php session_start();
 require_once 'Header.php';
 ?>
@@ -18,7 +11,7 @@ require_once 'Header.php';
     <table class="table table-hover">
         <thead>
         <tr>
-            <br><br>
+
             <th scope="col">User email</th>
             <th scope="col">Username</th>
             <th scope="col">First Name</th>
@@ -60,5 +53,6 @@ require_once 'Header.php';
         ?>
 
     </table>
+</div>
 </body>
 </html>

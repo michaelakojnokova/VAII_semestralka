@@ -24,7 +24,7 @@ require_once 'Header.php';
         <input class="rounded" type="text" placeholder="Enter Username/Email" name="uid" id="username">
 
         <label for="password"><b>Password</b></label>
-        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="psw">
+        <input class="rounded" type="password" placeholder="Enter Password" name="psw" id="password">
         <hr>
 
         <button name="submit" type="submit" class="registerbtn button5">Log in</button>
