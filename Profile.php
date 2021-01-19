@@ -101,4 +101,22 @@ as $row) {
             }
         }
     }
+
+    if (isset($_GET["action"])) {
+        if ($_GET["action"] == "error") {
+            if ($_GET["error"] == 'emptyName') {
+                echo "
+    <div class='alert alert-danger'>Name shouldn't be empty</div>
+    ";
+            } else if ($_GET["error"] == 'email') {
+                echo "
+    <div class='alert alert-danger'>Email format is invalid</div>
+    ";
+            } else if ($_GET["error"] == 'age') {
+                echo "
+    <div class='alert alert-danger'>Invalid age</div>
+    ";
+            }
+        }
+    }
     ?>

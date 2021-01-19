@@ -3,7 +3,8 @@
 
 if ($_GET["action"] == 'submit') {
 
-    include 'includes/Database.inc.php';
+    require_once 'Database.inc.php';
+    require_once 'SignupLoginFunctions.inc.php';
     session_start();
 
     $data = array(
@@ -22,6 +23,23 @@ if ($_GET["action"] == 'submit') {
    age = ?
    WHERE usersUid = ?
    ";
+
+
+    if (invalidEmail($data['usersEmail']) !== false) {
+        header("location:../Profile.php?action=error&error=email");
+        exit();
+    }
+
+    if ($data['firstName'] == '' || $data['lastName'] == '') {
+        header("location:../Profile.php?action=error&error=emptyName");
+        exit();
+    }
+
+    if (!is_numeric($data['age'])) {
+        header("location:../Profile.php?action=error&error=age");
+        exit();
+    }
+
     $conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
     $statement = $conn->prepare($query);
     $statement->bind_param('sssis', $data['firstName'], $data['lastName'], $data['usersEmail'], $data['age'], $data['usersUid']);
