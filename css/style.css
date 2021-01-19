@@ -899,7 +899,6 @@ body {
 
 .write_comment col-lg-8 col-md-10 mx-auto {
     background-color: #ffe1e3;
-
 }
 
 .comments .comment .date {
@@ -975,9 +974,8 @@ textarea {
 }
 
 .comment-box {
-    width: 900px;
+    width: 550px;
     padding: 17px;
-    margin-bottom: 4px;
     background-color: #ffe1e3;
     border-radius: 4px;
     margin-left: auto;
@@ -994,8 +992,8 @@ textarea {
 
 .edit-form {
     position: absolute;
-    top: 5px;
-    right: 3px;
+    top: 50px;
+    right: 45px;
 }
 
 .edit-form button {
@@ -1014,8 +1012,8 @@ textarea {
 
 .delete-form {
     position: absolute;
-    top: 5px;
-    right: 55px;
+    top: 50px;
+    right: 100px;
 }
 
 .delete-form button {
@@ -1051,7 +1049,7 @@ textarea {
     text-align: center;
 }
 #add{
-display: flex;
+    display: flex;
     justify-content: flex-end;
 
 }
@@ -1060,7 +1058,7 @@ table.center{
     margin-right: auto;
 }
 .panel-title{
-   padding-left: 485px;
+    padding-left: 485px;
 }
 .panel-body{
     padding-top: 20px;
