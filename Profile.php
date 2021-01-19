@@ -10,9 +10,9 @@ require_once 'includes/Database.inc.php';
     <div class="panel-heading">
         <div class="row">
             <div class="col-sm">
-                <h3 id="profiledetails" class="panel-title">Profile Details</h3>
+                <h3 id="profiledetails"  class="panel-title">Profile Details</h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" >
                 <a href="Profile.php?action=edit" class="btn btn-success btn-xs">Edit</a>
 
             </div>
@@ -32,95 +32,73 @@ require_once 'includes/Database.inc.php';
 //ak stlacim edit , zobrazi sa mi formular na upravu a url sa nastavi na edit
 
 if ($_GET["action"] == 'edit') {
-    $result = getUserProfileData($_SESSION["useruid"], $conn);
+$result = getUserProfileData($_SESSION["useruid"], $conn);
 
-    foreach ($result
+foreach ($result
 
-             as $row) {
+as $row) {
 
-        ?>
+?>
 
-        <div class="panel panel-default ">
-            <div class="panel-body  ">
-                <form method="post" action="includes/Profile.inc.php?action=submit" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <input id="submitbtn" class="btn btn-success" type="submit" submit="Submit" value="Submit">
+<div  class="panel panel-default ">
+    <div  class="panel-body  ">
+        <form method="post" action="includes/Profile.inc.php?action=submit" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="row">
+                    <label style="padding-left:20px" class="col-md-1">First name</label>
+                    <div class="col-sm-5">
+                        <input type="name" name="firstName" id="firstName" class="form-control" value="<?php echo $row["firstName"]; ?>" />
                     </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <label style="padding-left:20px" class="col-md-1">First name</label>
-                            <div class="col-sm-5">
-                                <input type="name" name="firstName" id="firstName" class="form-control"
-                                       value="<?php echo $row["firstName"]; ?>"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <label class="col-md-1" style="padding-left:20px">Last name</label>
-                            <div class="col-sm-5">
-                                <input type="name" name="lastName" id="lastName" class="form-control"
-                                       value="<?php echo $row["lastName"]; ?>"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="row">
-                            <label class="col-md-1" style="padding-left:20px">Email</label>
-                            <div class="col-sm-5">
-                                <input type="email" name="usersEmail" id="usersEmail" class="form-control"
-                                       value="<?php echo $row["usersEmail"]; ?>"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <label class="col-md-1" style="padding-left:20px">Age</label>
-                            <div class="col-sm-5">
-                                <input type="number" name="age" id="age" class="form-control"
-                                       value="<?php echo $row["age"]; ?>"/>
-                            </div>
-                        </div>
-                    </div>
-
-                </form>
+                </div>
             </div>
-        </div>
-        <?php
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-1" style="padding-left:20px">Last name</label>
+                    <div class="col-sm-5">
+                        <input type="name" name="lastName" id="lastName" class="form-control" value="<?php echo $row["lastName"]; ?>" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-1" style="padding-left:20px">Email</label>
+                    <div class="col-sm-5">
+                        <input type="email" name="usersEmail" id="usersEmail" class="form-control" value="<?php echo $row["usersEmail"]; ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-1" style="padding-left:20px">Age</label>
+                    <div class="col-sm-5">
+                        <input type="number" name="age" id="age" class="form-control" value="<?php echo $row["age"]; ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <input id="submitbtn" class="btn btn-success" type="submit" submit="Submit" value="Submit" >
+            </div>
+        </form>
+    </div>
+</div>
+    <?php
 
 
     }
-}
+    }
 
-?>
-<?php
+    ?>
+    <?php
 
-if (isset($_GET["action"])) {
-    if ($_GET["action"] == "view") {
-        if (isset($_GET["success"])) {
-            echo '
+    if (isset($_GET["action"])) {
+        if ($_GET["action"] == "view") {
+            if (isset($_GET["success"])) {
+                echo '
     <div class="alert alert-success">Profile Edited Successfully</div>
     ';
+            }
         }
     }
-}
-if (isset($_GET["action"])) {
-    if ($_GET["action"] == "error") {
-        if ($_GET["error"] == 'emptyName') {
-            echo "
-    <div class='alert alert-danger'>Name shouldn't be empty</div>
-    ";
-        } else if ($_GET["error"] == 'email') {
-            echo "
-    <div class='alert alert-danger'>Email format is invalid</div>
-    ";
-        } else if ($_GET["error"] == 'age') {
-            echo "
-    <div class='alert alert-danger'>Ivalid age</div>
-    ";
-        }
-    }
-}
-
-?>
+    ?>
