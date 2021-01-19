@@ -1,9 +1,11 @@
 <?php
-require_once('includes/Users.inc.php');
+session_start();
+require_once 'Header.php';
+require_once'includes/Users.inc.php';
+require_once 'includes/Database.inc.php';
 ?>
 
-<?php session_start();
-require_once 'Header.php';
+<?php
 ?>
 
 <div class="table-data">
@@ -22,8 +24,8 @@ require_once 'Header.php';
         </thead>
 
         <?php
-        $connection = mysqli_connect('localhost', 'root', '', 'vaii_database');
-        $fetchData = fetch_data($connection);;
+
+        $fetchData = fetch_data($conn);;
         if (count($fetchData) > 0) {
             $usersId = 1;
             foreach ($fetchData as $data) {

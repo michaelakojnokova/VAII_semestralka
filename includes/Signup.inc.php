@@ -2,7 +2,6 @@
 require_once 'Database.inc.php';
 require_once 'SignupLoginFunctions.inc.php';
 
-$conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
 
 if (isset($_POST["submit1"])) {
     $email = $_POST["email"];

@@ -1,10 +1,10 @@
 <?php
 
 if (isset($_POST["action"])) {
-    $connect = mysqli_connect("localhost", "root", "", "vaii_database");
+
     if ($_POST["action"] == "fetch") {
         $query = "SELECT * FROM tbl_images ORDER BY id DESC";
-        $result = mysqli_query($connect, $query);
+        $result = mysqli_query($conn, $query);
         $output = '
 
    <table class="table table-bordered">  
@@ -36,20 +36,20 @@ if (isset($_POST["action"])) {
     {
         $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
         $query = "INSERT INTO tbl_images(name) VALUES ('$file')";
-        if (mysqli_query($connect, $query)) {
+        if (mysqli_query($conn, $query)) {
             echo 'Image Inserted into Database';
         }
     }
     if ($_POST["action"] == "update") {
         $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
         $query = "UPDATE tbl_images SET name = '$file' WHERE id = '" . $_POST["image_id"] . "'";
-        if (mysqli_query($connect, $query)) {
+        if (mysqli_query($conn, $query)) {
             echo 'Image Updated into Database';
         }
     }
     if ($_POST["action"] == "delete") {
         $query = "DELETE FROM tbl_images WHERE id = '" . $_POST["image_id"] . "'";
-        if (mysqli_query($connect, $query)) {
+        if (mysqli_query($conn, $query)) {
             echo 'Image Deleted from Database';
         }
     }

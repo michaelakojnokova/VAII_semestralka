@@ -20,7 +20,7 @@ require_once 'includes/Database.inc.php';
     </div>
     <div class="panel=body">
         <?php
-        $conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
+
         //zobraz data na zaklade username
         echo getUserProfileDataHTML($_SESSION["useruid"], $conn);
         ?>

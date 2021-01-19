@@ -37,8 +37,9 @@
 <hr>
 <?php
 require_once 'includes/Comments.inc.php';
+require_once 'includes/Database.inc.php';
 
-$conn = mysqli_connect('localhost','root','','vaii_database');
+
 $cid = $_POST['cid'];
 $uid = $_POST['uid'];
 $date = $_POST['date'];

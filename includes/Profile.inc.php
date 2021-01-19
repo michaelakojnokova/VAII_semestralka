@@ -40,24 +40,24 @@ if ($_GET["action"] == 'submit') {
         exit();
     }
 
-    $conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
+
     $statement = $conn->prepare($query);
     $statement->bind_param('sssis', $data['firstName'], $data['lastName'], $data['usersEmail'], $data['age'], $data['usersUid']);
     $statement->execute();
     header("location:../Profile.php?action=view&success=1");
 }
 //////ziskanie dat
-function getUserProfileData($useruid, $connection)
+function getUserProfileData($useruid, $conn)
 {
     $query = "SELECT * FROM users WHERE usersUid = '" . $useruid . "'
 ";
-    return $connection->query($query);
+    return $conn->query($query);
 }
 
 /////zobrazenie dat do html
-function getUserProfileDataHTML($useruid, $connection)
+function getUserProfileDataHTML($useruid, $conn)
 {
-    $result = getUserProfileData($useruid, $connection);
+    $result = getUserProfileData($useruid, $conn);
 
     $output = '
 <div class=" table table-responsive">

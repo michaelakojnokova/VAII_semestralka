@@ -3,7 +3,6 @@ session_start();
 date_default_timezone_set('Europe/Bratislava');
 require_once 'includes/Database.inc.php';
 require_once 'includes/Comments.inc.php';
-$conn = mysqli_connect('localhost','root','','vaii_database');
 require_once 'Header.php';
 ?>
 
@@ -77,24 +76,24 @@ require_once 'Header.php';
 </article>
 
 
-
 <hr>
 <?php
-if(isset($_SESSION['userid'])) {
-    echo "<div class='comment  mx-auto d-flex justify-content-center '>
-<form method='post' action='".setComments($conn)."'>
-    <input type='hidden' name='uid' value='".$_SESSION['userid']."'>
-    <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+if (isset($_SESSION['userid'])) {
+    echo "<div class='  mx-auto d-flex justify-content-center '>
+<form method='post' action='" . setComments($conn) . "'>
+    <input type='hidden' name='uid' value='" . $_SESSION['userid'] . "'>
+    <input type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
     <textarea style='resize: none' name='message' placeholder='Write your comment here...'> </textarea><br>
     <button id='submitBtn1' name='commentSubmit' type='submit'>Submit comment</button>
     <br><br>
 </form> </div>";
-}
-else{
+} else {
     echo "<div id = information  > You need to be logged in to comment !  </div> <br><br>";
 }
 
 getComments($conn);
+
+
 ?>
 
 
