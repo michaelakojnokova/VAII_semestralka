@@ -80,7 +80,7 @@ require_once 'Header.php';
 
 <hr>
 <?php
-if(isset($_SESSION['userid'])) { //musim bzt prihlasena ak chcem komentovat, inak vypise hlasku
+if(isset($_SESSION['userid'])) {
     echo "<div class='comment  mx-auto d-flex justify-content-center '>
 <form method='post' action='".setComments($conn)."'>
     <input type='hidden' name='uid' value='".$_SESSION['userid']."'>
