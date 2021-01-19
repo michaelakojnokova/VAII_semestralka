@@ -9,7 +9,7 @@ require_once 'includes/Database.inc.php';
     <div class="panel panel-default">
     <div class="panel-heading">
         <div class="text-center">
-            <span class="h2" style="padding-right:20px;"> Profile Details</span>
+            <span class="h2" style="padding-right:20px;padding-top: 25px"> Profile Details</span>
             <a href=" Profile.php?action=edit" class="btn btn-success btn-xs">Edit</a>
         </div>
 
@@ -34,7 +34,7 @@ if ($_GET["action"] == 'edit') {
              as $row) {
 
         ?>
-        <div class="container" style="max-width: 800px;">
+        <div class="container" style="max-width: 800px;margin-bottom:40px" >
             <form method="post" action="includes/Profile.inc.php?action=submit" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="firstName">First name</label>
