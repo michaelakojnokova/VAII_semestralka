@@ -15,7 +15,7 @@ require_once 'includes/Database.inc.php';
 
         <div class="panel=body" style="margin-top: 20px;">
             <?php
-            //zobraz data na zaklade username
+
             echo getUserProfileDataHTML($_SESSION["useruid"], $conn);
             ?>
         </div>
@@ -33,8 +33,7 @@ if ($_GET["action"] == 'edit') {
 
              as $row) {
 
-        ?>
-        <div class="container" style="max-width: 800px;margin-bottom:40px" >
+        ?> <div class="container" style="max-width: 800px;margin-bottom:40px" >
             <form method="post" action="includes/Profile.inc.php?action=submit" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="firstName">First name</label>

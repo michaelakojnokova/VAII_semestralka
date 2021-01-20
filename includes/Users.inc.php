@@ -24,9 +24,11 @@ function fetch_data($connection)
 // delete data query
 function delete_data($connection, $usersId)
 {
+    $query = 'DELETE from users WHERE usersId=?';
+    $statement = $connection->prepare($query);
+    $statement->bind_param('i', $usersId);
+    $exec = $statement->execute();
 
-    $query = "DELETE from users WHERE usersId=$usersId";
-    $exec = mysqli_query($connection, $query);
     if ($exec) {
         header('location:Users.php');
     } else {

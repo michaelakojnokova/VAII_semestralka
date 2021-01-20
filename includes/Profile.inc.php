@@ -24,6 +24,11 @@ if ($_GET["action"] == 'submit') {
    WHERE usersUid = ?
    ";
 
+    $statement = $conn->prepare($query);
+    $statement->bind_param('sssis', $data['firstName'], $data['lastName'], $data['usersEmail'], $data['age'], $data['usersUid']);
+    $statement->execute();
+    header("location:../Profile.php?action=view&success=1");
+
 
     if (invalidEmail($data['usersEmail']) !== false) {
         header("location:../Profile.php?action=error&error=email");
@@ -41,10 +46,6 @@ if ($_GET["action"] == 'submit') {
     }
 
 
-    $statement = $conn->prepare($query);
-    $statement->bind_param('sssis', $data['firstName'], $data['lastName'], $data['usersEmail'], $data['age'], $data['usersUid']);
-    $statement->execute();
-    header("location:../Profile.php?action=view&success=1");
 }
 //////ziskanie dat
 function getUserProfileData($useruid, $conn)

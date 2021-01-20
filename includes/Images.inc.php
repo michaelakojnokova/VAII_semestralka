@@ -33,24 +33,39 @@ if (isset($_POST["action"])) {
     }
 
 
+
     if ($_POST["action"] == "insert") //ked stlacim tlacidlo insert
     {
-        $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-        $query = "INSERT INTO tbl_images(name) VALUES ('$file')";
-        if (mysqli_query($conn, $query)) {
+        $file = file_get_contents($_FILES["image"]["tmp_name"]);
+
+        $query = 'INSERT INTO tbl_images(name) VALUES (?)';
+        $statement = $conn->prepare($query);
+        $statement->bind_param('s', $file);
+        $exec = $statement->execute();
+
+        if ($exec) {
             echo 'Image Inserted into Database';
         }
     }
     if ($_POST["action"] == "update") {
-        $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-        $query = "UPDATE tbl_images SET name = '$file' WHERE id = '" . $_POST["image_id"] . "'";
-        if (mysqli_query($conn, $query)) {
+        $file = file_get_contents($_FILES["image"]["tmp_name"]);
+
+        $query = "UPDATE tbl_images SET name = ? WHERE id = ?";
+        $statement = $conn->prepare($query);
+        $statement->bind_param('si', $file, $_POST["image_id"] );
+        $exec = $statement->execute();
+
+        if ($exec) {
             echo 'Image Updated into Database';
         }
     }
     if ($_POST["action"] == "delete") {
-        $query = "DELETE FROM tbl_images WHERE id = '" . $_POST["image_id"] . "'";
-        if (mysqli_query($conn, $query)) {
+
+        $query = 'DELETE FROM tbl_images WHERE id=?';
+        $statement = $conn->prepare($query);
+        $statement->bind_param('i', $_POST["image_id"]);
+        $exec = $statement->execute();
+        if ($exec) {
             echo 'Image Deleted from Database';
         }
     }

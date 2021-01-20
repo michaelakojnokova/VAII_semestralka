@@ -7,7 +7,7 @@ require_once 'includes/Images.inc.php';
 
 <br/><br/>
 <div class="container-sm">
-    <h3 id="imagesH3" >Images used in articles</h3>
+    <h3 id="imagesH3">Images used in articles</h3>
     <br/>
     <div>
         <button type="button" name="add" id="add" class="btn btn-success">Add</button>
@@ -17,8 +17,6 @@ require_once 'includes/Images.inc.php';
 
     </div>
 </div>
-
-
 
 <div id="imageModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -63,13 +61,15 @@ require_once 'includes/Images.inc.php';
             })
         } //ked kliknem na add
         $('#add').click(function () {
-            $('#imageModal').modal('show');
-            $('#image_form')[0].reset();
+            $('#imageModal').modal('show'); //ukaze modalne okno
+            $('#image_form')[0].reset(); //resetovanie formulara
             $('.modal-title').text("Add Image");
             $('#image_id').val('');
             $('#action').val('insert');
             $('#insert').val("Insert");
-        }); //nevybrala som ziadny obrazok
+        });
+
+        //nevybrala som ziadny obrazok
         $('#image_form').submit(function (event) {
             event.preventDefault();
             var image_name = $('#image').val();
@@ -79,20 +79,23 @@ require_once 'includes/Images.inc.php';
             } else { //nespravny format obrazku
                 var extension = $('#image').val().split('.').pop().toLowerCase();
                 if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+                    //-1 ak nenajde v tej pripone dany format
                     alert("Invalid Image File");
                     $('#image').val('');
                     return false;
+
                 } else //vybrala som spravny format
-                {
+                     {
                     $.ajax({
                         url: "includes/Images.inc.php",
                         method: "POST",
                         data: new FormData(this),
                         contentType: false,
                         processData: false,
-                        success: function (data) {
+
+                        success: function (data) { //zbehne ak dostanem od servera kladnu odpoved
                             alert(data);
-                            fetch_data();
+                            fetch_data(); //renderovanie bez refreshu stranky
                             $('#image_form')[0].reset();
                             $('#imageModal').modal('hide');
                         }
@@ -100,13 +103,15 @@ require_once 'includes/Images.inc.php';
                 }
             }
         });
-        $(document).on('click', '.update', function () {
+
+        $(document).on('click', '.update', function () { //stlacim edit vyberiem obrazok a updatenem ho  a tym padom idem na submit
             $('#image_id').val($(this).attr("id"));
             $('#action').val("update");
             $('.modal-title').text("Update Image");
             $('#insert').val("Update");
             $('#imageModal').modal("show");
         });
+
         $(document).on('click', '.delete', function () {
             var image_id = $(this).attr("id");
             var action = "delete";
