@@ -24,7 +24,7 @@ require_once 'includes/Database.inc.php';
 
 
 <?php
-//ak stlacim edit , zobrazi sa mi formular na upravu a url sa nastavi na edit
+
 
 if ($_GET["action"] == 'edit') {
     $result = getUserProfileData($_SESSION["useruid"], $conn);
@@ -50,9 +50,9 @@ if ($_GET["action"] == 'edit') {
                 </div>
                 <div class="form-group">
                     <label for="age">Age</label>
-                    <input type="number" class="form-control" name="age" id="age" value=" <?php echo $row["age"]; ?>">
+                    <input type="number" class="form-control" name="age" id="age" value="<?php echo $row["age"]; ?>">
                 </div>
-                <input id="submitbtn" class="btn btn-success mx-auto" type="submit" submit="Submit" value="Submit">
+                <input id="submitbtn" class="btn btn-success mx-auto" type="submit"  value="Submit">
             </form>
         </div>
         <?php

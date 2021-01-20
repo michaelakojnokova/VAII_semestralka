@@ -19,9 +19,9 @@ if ($vote == 1) {
 
 //vlozim obsah do textaku
 $insertvote = $yes."||".$no;
-$fp = fopen($filename,"w");
-fputs($fp,$insertvote);
-fclose($fp);
+$file = fopen($filename,"w");
+fputs($file,$insertvote);
+fclose($file);
 ?>
 
 <h2 style="font-family: 'Neutraface 2 Display Medium'">Result:</h2>

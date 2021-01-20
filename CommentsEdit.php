@@ -3,7 +3,7 @@
 session_start();
 require_once 'includes/Comments.inc.php';
 require_once 'Header.php';
-$conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
+require_once 'includes/Database.inc.php';
 $cid = $_POST['cid'];
 $uid = $_POST['uid'];
 $date = $_POST['date'];

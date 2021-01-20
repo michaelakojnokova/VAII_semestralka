@@ -84,6 +84,16 @@ require_once 'Header.php';
 
 
 
+            <div id="poll">
+                <h3 style="font-family: 'Neutraface 2 Display Medium'">Do you like our website?</h3>
+                <form>
+                    Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+                    No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+                </form>
+            </div>
+
+        </div>
+        <br><br>
 
 
                 <script>
@@ -97,23 +107,12 @@ require_once 'Header.php';
                         xmlhttp.open("GET", "Poll.php?vote=" + int, true);
                         xmlhttp.send();
                     }
-
                 </script>
 
 
 
 
 
-            <div id="poll">
-                <h3 style="font-family: 'Neutraface 2 Display Medium'">Do you like our website?</h3>
-                <form>
-                    Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
-                    No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
-                </form>
-            </div>
-
-        </div>
-        <br><br>
 
 
         <div class="col-sm-8">

@@ -14,6 +14,10 @@ if (isset($_POST["submit1"])) {
         header("location: ../Signup.php?error=emptyInput");
         exit();
     }
+    if (uidExists($conn, $username, $email) !== false) {
+        header("location: ../Signup.php?error=usernameTaken");
+        exit();
+    }
 
     if (invalidUid($username) !== false) {
         header("location: ../Signup.php?error=invalidUid");
@@ -32,10 +36,7 @@ if (isset($_POST["submit1"])) {
     }
 
 
-    if (uidExists($conn, $username, $email) !== false) {
-        header("location: ../Signup.php?error=usernameTaken");
-        exit();
-    }
+
 
     createUser($conn, $email, $username, $password);
 

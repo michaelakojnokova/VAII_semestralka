@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/Database.inc.php';
-$conn = mysqli_connect('localhost', 'root', '', 'vaii_database');
+
 if (isset($_GET['delete'])) {
     $usersId = $_GET['delete'];
     delete_data($conn, $usersId);

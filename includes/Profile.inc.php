@@ -60,13 +60,13 @@ function getUserProfileDataHTML($useruid, $conn)
     $result = getUserProfileData($useruid, $conn);
 
     $output = '
-<div class=" table table-responsive">
-    <table id="profileTable" class="center">
+            <div class=" table table-responsive">
+                <table id="profileTable" class="center">
         ';
 
-    foreach ($result as $row) {
-        //profil detaily
-        $output .= '
+      foreach ($result as $row) {
+             //profil detaily
+              $output .= '
         <tr>
             <th>First name</th>
             <td>' . $row["firstName"] . '</td>

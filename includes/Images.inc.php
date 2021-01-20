@@ -32,6 +32,7 @@ if (isset($_POST["action"])) {
         echo $output;
     }
 
+
     if ($_POST["action"] == "insert") //ked stlacim tlacidlo insert
     {
         $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));

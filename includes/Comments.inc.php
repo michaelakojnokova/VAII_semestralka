@@ -25,12 +25,12 @@ function getComments($conn)
         if ($row2 = $result2->fetch_assoc()) {
             echo "<div class='comment-box' >
 <div class='col-sm-' ></div> <p>";
-            echo $row2['usersUid'] . "<br>";//user table
+            echo $row2['usersUid'] . "<br>";
             echo $row['date'] . "<br>";
             echo nl2br($row['message']);
             echo "</p>";
             if (isset($_SESSION['useruid'])) {
-                if ($_SESSION['useruid'] == $row2['usersUid']) { //zhoduje sa vysledok z databazy s ID v session?
+                if ($_SESSION['useruid'] == $row2['usersUid']) {
                     echo " <form class='delete-form' method='post' action='" . deleteComments($conn) . "'>  
              <input type='hidden' name='cid' value='" . $row['cid'] . "'> 
             <button type='submit' name='commentDelete'>Delete</button>

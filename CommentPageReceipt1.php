@@ -3,12 +3,10 @@ session_start();
 date_default_timezone_set('Europe/Bratislava');
 require_once 'includes/Database.inc.php';
 require_once 'includes/Comments.inc.php';
-// $conn = mysqli_connect('localhost','root','','vaii_database');
 require_once 'Header.php';
 ?>
 
 
-<!-- Post -->
 <article>
     <div class="container">
         <div class="row">
@@ -90,7 +88,6 @@ if(isset($_SESSION['userid'])) {
     <br><br>
 </form> 
 </div>";
-
 
 }
 else{

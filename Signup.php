@@ -15,14 +15,14 @@ require_once 'Header.php';
             if (isset($_GET["error"])) {
                 if ($_GET["error"] == "emptyInput") { //pozrieme sa do URL či je erorr prazdny
                     echo "<p> Fill in all fields !</p>";
+                } elseif ($_GET["error"] == "usernameTaken") {
+                    echo "<p>Username is already taken!</p>";
                 } elseif ($_GET["error"] == "invalidUid") {
                     echo "<p>Choose a proper username !</p>";
                 } elseif ($_GET["error"] == "invalidEmail") {
                     echo "<p>Choose a proper email !</p>";
                 } elseif ($_GET["error"] == "passwordsDontMatch") {
                     echo "<p>Passwords don't match !</p>";
-                } elseif ($_GET["error"] == "usernameTaken") {
-                    echo "<p>Username is already taken!</p>";
                 } elseif ($_GET["error"] == "none") {
                     echo "<p>You have signed up !</p>";
                 }

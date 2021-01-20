@@ -115,7 +115,7 @@ function loginUser($conn, $username, $password)
     }
     $passwordHashed = $uidExists["usersPwd"];
     $checkPassword = password_verify($password, $passwordHashed);
-    if ($checkPassword === false) { //user wrote wrong password
+    if ($checkPassword === false) {
         header("location: ../Login.php?error=wrongLogin");
         exit();
 

@@ -5,13 +5,11 @@ require_once 'Header.php';
 ?>
 
 
-
 <div class="table-data">
 
     <table class="table table-hover">
         <thead>
         <tr>
-
             <th scope="col">User email</th>
             <th scope="col">Username</th>
             <th scope="col">First Name</th>
@@ -25,7 +23,6 @@ require_once 'Header.php';
         $connection = mysqli_connect('localhost', 'root', '', 'vaii_database');
         $fetchData = fetch_data($connection);;
         if (count($fetchData) > 0) {
-            $usersId = 1;
             foreach ($fetchData as $data) {
                 ?>
                 <tbody>
@@ -41,7 +38,6 @@ require_once 'Header.php';
                 </tr>
                 </tbody>
                 <?php
-                $usersId++;
             }
         } else {
             ?>
